@@ -2,7 +2,7 @@
   <div id="app">
 
     <!--<img src="./assets/logo.png">-->
-    <div name="hero-bkg" class="wrap-banner">
+    <div name="hero-bkg" class="wrap-banner" @click="counter++">
       <vue-particles
         color="#ffffff"
         :particleOpacity="0.7"
@@ -26,12 +26,12 @@
                                             text-align: left" v-if="showLogo">
         <img :src="welinkLogo" alt="Welink"
 >
-        <!-- <div name="buttonPanel">
+        <div name="buttonPanel">
           <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
           <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
           <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
           <div>{{ counter }}</div>
-        </div> -->
+        </div>
 
       </div>
       <div class="app-front mb-0 pb-0"
@@ -78,9 +78,6 @@
     </div>
     <!-- <main-content></main-content> -->
     <!-- <foot></foot> -->
-    <v-container style="height: 100%">
-      Where's WALDO
-    </v-container>
   </div>
 </template>
 
