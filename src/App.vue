@@ -2,7 +2,8 @@
   <div id="app">
 
     <!--<img src="./assets/logo.png">-->
-    <div name="hero-bkg" class="wrap-banner" @click="counter++">
+    <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
+    <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
       <vue-particles
         color="#ffffff"
         :particleOpacity="0.7"
@@ -56,7 +57,7 @@
 
         <div class="app-front text-xs-center" style="position: absolute; top: 60%">
           <transition appear
-                  enter-active-class="animated infinite wobble"
+                  enter-active-class="animated zoomInUp"
                   leave-active-class="animated bounceOutRight">
             <div v-if="showWatch">
               <h2 class="text-xs-center" >
@@ -66,7 +67,7 @@
           </transition>
 
           <transition appear
-                  enter-active-class="animated infinite wobble"
+                  enter-active-class="animated zoomInUp"
                   leave-active-class="animated bounceOutRight">
             <div  v-if="showSharing">
               <h3>
@@ -97,9 +98,9 @@ export default {
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
     showLogo: true,
-    showComingSoon: true,
-    showSharing: true,
-    showWatch: true,
+    showComingSoon: false,
+    showWatch: false,
+    showSharing: false,
     drawer: null,
     counter: 0
   }),
@@ -108,25 +109,43 @@ export default {
     //this.onTimer = setInterval(this.logoOn, 1000);
   },
   methods: {
-    logoOn: function() {
-      setTimeout(this.logoOff, 3000);
-      return (this.showLogo = true);
-    },
-    logoOff: function() {
-      return (this.showLogo = false);
+    // logoOn: function() {
+    //   setTimeout(this.logoOff, 3000);
+    //   return (this.showLogo = true);
+    // },
+    // logoOff: function() {
+    //   return (this.showLogo = false);
+    // },
+    incrementCounter: function() {
+      return this.counter++;
     },
     clickSwitchCase: function() {
       switch (this.counter) {
         case 0:
-          return (this.showLogo = false);
+          this.showLogo = true;
+          break;
         case 1:
-          return (this.showLogo = true);
+          this.showWatch = true;
+          break;
         case 2:
-          return (this.counter = 0);
+          this.showComingSoon = true;
+          break;
+        case 3:
+          this.showSharing = true;
+          break;
+        case 4:
+          this.showWatch = true;
+          break;
+        case 5:
+          this.showWatch = true;
+          break;
+        case 8:
+          this.counter = 0;
+          break;
       }
     }
   },
-  computed: {},
+
   beforeDestroy() {
     //clearInterval(this.onTimer);
   }
