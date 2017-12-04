@@ -150,30 +150,41 @@ export default {
         case 7:
           break;
         case 8:
-          this.showLogo = true;
+          this.showSharing = true;
           //this.showWatch = true;
           break;
         case 9:
           break;
-        case 10:
+        case 11:
           this.showComingSoon = false;
           this.showWatch = false;
-          this.counter = 0;
+          this.showSharing = false;
+          break;
+        case 12:
+          break;
+        case 13:
+
+          break;
+        case 14:
+          break;
+        case 15:
+          this.showLogo = true;
+          break;
+        case 10:
+          //this.counter = 0;
           break;
 
-          this.showSharing = false;
           this.showLogo = false;
 
           break;
 
-          this.showSharing = true;
           this.showWatch = false;
           this.showWatch = false;
           break;
-        // case 8:
+          // case 8:
           this.showComingSoon = true;
-        //   this.showWatch = true;
-        //   break;
+          //   this.showWatch = true;
+          //   break;
           this.showSharing = true;
         // case 8:
         //   this.showWatch = true;
