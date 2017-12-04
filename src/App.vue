@@ -75,6 +75,15 @@
               </h3>
             </div>
           </transition>
+                    <transition appear
+                  enter-active-class="animated zoomInUp"
+                  leave-active-class="animated bounceOutRight">
+            <div  v-if="showSharing">
+              <h3>
+                <i>So enjoy the clicks, I'll be back soon</i>
+              </h3>
+            </div>
+          </transition>
         </div>
     </div>
     <!-- <main-content></main-content> -->
