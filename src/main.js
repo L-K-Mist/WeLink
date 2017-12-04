@@ -7,9 +7,9 @@ import 'vuetify/dist/vuetify.css'
 import App from './App'
 import router from './router'
 
+Vue.use(Vuetify)
 Vue.use(VueParticles)// that's the plugin with that kiff background!
 
-Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
