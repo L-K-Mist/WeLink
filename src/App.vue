@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1 style="z-height: 99; positon: fixed; right: 10; color: white">{{ counter }}</h1>
 
     <!--<img src="./assets/logo.png">-->
     <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
@@ -31,7 +32,7 @@
           <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
           <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
           <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
-          <div>{{ counter }}</div>
+
         </div>
 
       </div>
@@ -106,7 +107,7 @@ export default {
   data: () => ({
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
-    showLogo: true,
+    showLogo: false,
     showComingSoon: false,
     showWatch: false,
     showSharing: false,
@@ -131,26 +132,47 @@ export default {
     clickSwitchCase: function() {
       switch (this.counter) {
         case 0:
-          this.showLogo = true;
+          this.showLogo = false;
           break;
         case 1:
-          this.showWatch = true;
+          this.showComingSoon = true;
           break;
         case 2:
-          this.showComingSoon = true;
+          this.showWatch = true;
           break;
         case 3:
           this.showSharing = true;
           break;
         case 4:
-          this.showWatch = true;
+          this.showLogo = false;
+          this.showWatch = false;
+          this.showComingSoon = false;
+          this.showSharing = false;
+          this.showWatch = false;
+          this.showWatch = false;
           break;
         case 5:
           this.showWatch = true;
           break;
+        case 7:
+          this.showLogo = true;
+          break;
         case 8:
+          this.showWatch = true;
+          break;
+        case 9:
+          this.showComingSoon = true;
+          break;
+        case 10:
+          this.showSharing = true;
           this.counter = 0;
           break;
+        // case 8:
+        //   this.showWatch = true;
+        //   break;
+        // case 8:
+        //   this.showWatch = true;
+        //   break;
       }
     }
   },
