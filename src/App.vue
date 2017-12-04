@@ -2,7 +2,7 @@
   <div id="app">
 
     <!--<img src="./assets/logo.png">-->
-    <div name="hero-bkg" class="wrap-banner" @click="counter++">
+    <div name="hero-bkg" class="wrap-banner">
       <vue-particles
         color="#ffffff"
         :particleOpacity="0.7"
@@ -25,15 +25,13 @@
                                             top: 10px;
                                             text-align: left" v-if="showLogo">
         <img :src="welinkLogo" alt="Welink"
-                                  style="
-
-                                  ">
-        <div name="buttonPanel">
+>
+        <!-- <div name="buttonPanel">
           <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
           <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
           <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
           <div>{{ counter }}</div>
-        </div>
+        </div> -->
 
       </div>
       <div class="app-front mb-0 pb-0"
@@ -45,16 +43,33 @@
                       ">
         <transition appear
               enter-active-class="animated zoomInDown"
-              leave-active-class="animated bounceOutRight"  v-if="showComingSoon">
-              <div>
-                <h1>
-                  WeLink 2.0 Coming Soon...
-                </h1>
-              </div>
-
+              leave-active-class="animated bounceOutRight" v-if="showComingSoon">
+        <div>
+          <h1>
+            WeLink 2.0 Coming Soon...
+          </h1>
+        </div>
         </transition>
 
       </div>
+      <vue-particles
+        color="#ffffff"
+        :particleOpacity="0.7"
+        linesColor="#ffffff"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="5"
+        :linesWidth="2"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
 
         <div class="app-front text-xs-center" style="position: absolute; top: 60%">
           <transition appear
@@ -75,8 +90,6 @@
                 <i>We'll be sharing how we did it as we do it.</i>
               </h3>
             </div>
-
-
           </transition>
         </div>
     </div>
@@ -129,7 +142,7 @@ export default {
         case 1:
           return (this.showLogo = true);
         case 2:
-          return;
+          return (this.counter = 0);
       }
     }
   },
