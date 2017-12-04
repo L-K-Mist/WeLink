@@ -129,47 +129,52 @@ export default {
     incrementCounter: function() {
       return this.counter++;
     },
+    //NTS Dylan you must slide alerts from right to left, because we read from left to right
     clickSwitchCase: function() {
       switch (this.counter) {
         case 0:
-          this.showLogo = false;
           break;
         case 1:
-          this.showComingSoon = true;
           break;
         case 2:
-          this.showWatch = true;
+          //this.showLogo = false;
           break;
         case 3:
-          this.showSharing = true;
+          this.showComingSoon = true;
           break;
         case 4:
-          this.showLogo = false;
-          this.showWatch = false;
-          this.showComingSoon = false;
-          this.showSharing = false;
-          this.showWatch = false;
-          this.showWatch = false;
           break;
         case 5:
           this.showWatch = true;
           break;
         case 7:
-          this.showLogo = true;
           break;
         case 8:
-          this.showWatch = true;
+          this.showLogo = true;
+          //this.showWatch = true;
           break;
         case 9:
-          this.showComingSoon = true;
           break;
         case 10:
-          this.showSharing = true;
+          this.showComingSoon = false;
+          this.showWatch = false;
           this.counter = 0;
           break;
+
+          this.showSharing = false;
+          this.showLogo = false;
+
+          break;
+
+          this.showSharing = true;
+          this.showWatch = false;
+          this.showWatch = false;
+          break;
         // case 8:
+          this.showComingSoon = true;
         //   this.showWatch = true;
         //   break;
+          this.showSharing = true;
         // case 8:
         //   this.showWatch = true;
         //   break;
