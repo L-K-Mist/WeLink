@@ -2,13 +2,9 @@
   <div id="app">
     <h1 style="color: white">{{ counter }}</h1>
     <!-- there was some creative power of chance in this one -->
-
     <v-app>
-
       <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
-
       <!-- </div> -->
-
       <!--<img src="./assets/logo.png">-->
       <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
       <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
@@ -133,7 +129,7 @@ export default {
     showComingSoon: false,
     showWatch: false,
     showSharing: false,
-    drawer: null,
+    //drawer: null,
     counter: 0,
     //info alert change the text value then make true
     alert: false,
@@ -141,13 +137,19 @@ export default {
     onTimer: ""
   }),
   created: function() {
+    let delay = 10000;
+    let displayFor = 5000;
     //this.flipPics();
+
     setTimeout(() => {
-      this.alert = true; // |this| properly refers to the person object
-    }, 3000);
+      if (this.counter < 2) {
+        this.alert = true;
+      } else this.alert = false;
+      // |this| properly refers to the person object
+    }, delay);
     setTimeout(() => {
       this.alert = false; // |this| properly refers to the person object
-    }, 9000);
+    }, delay + displayFor);
   },
   methods: {
     // logoOn: function() {
@@ -224,7 +226,7 @@ export default {
   },
 
   beforeDestroy() {
-    clearInterval(this.onTimer);
+    //clearInterval(this.onTimer);
     this.counter = 0;
   }
 };
