@@ -8,7 +8,6 @@
       <!--<img src="./assets/logo.png">-->
       <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
       <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
-
         <vue-particles
           color="#ffffff"
           :particleOpacity="0.7"
@@ -36,7 +35,6 @@
             <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
             <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
           </div>
-
         </div>
         <div class="app-front mb-0 pb-0"
         style="display: inline-block;
@@ -56,39 +54,36 @@
           </transition>
 
         </div>
+        <div class="app-front text-xs-center" style="position: absolute; top: 60%">
+          <transition appear
+                  enter-active-class="animated zoomInUp"
+                  leave-active-class="animated bounceOutRight">
+            <div v-if="showWatch">
+              <h2 class="text-xs-center" >
+                Watch This Space!
+              </h2>
+            </div>
+          </transition>
 
-
-          <div class="app-front text-xs-center" style="position: absolute; top: 60%">
-            <transition appear
-                    enter-active-class="animated zoomInUp"
-                    leave-active-class="animated bounceOutRight">
-              <div v-if="showWatch">
-                <h2 class="text-xs-center" >
-                  Watch This Space!
-                </h2>
-              </div>
-            </transition>
-
-            <transition appear
-                    enter-active-class="animated zoomInUp"
-                    leave-active-class="animated bounceOutRight">
-              <div  v-if="showSharing">
-                <h3>
-                  <i>We'll be sharing how we did it as we do it.</i>
-                </h3>
-              </div>
-            </transition>
-            <transition appear
-                    enter-active-class="animated zoomInUp"
-                    leave-active-class="animated bounceOutRight">
-              <div  v-if="showSharing">
-                <h3>
-                  <i>So enjoy the clicks, I'll be back soon</i>
-                </h3>
-              </div>
-            </transition>
-
-          </div>
+          <transition appear
+                  enter-active-class="animated zoomInUp"
+                  leave-active-class="animated bounceOutRight">
+            <div  v-if="showSharing">
+              <h3>
+                <i>We'll be sharing how we did it as we do it.</i>
+              </h3>
+            </div>
+          </transition>
+          <transition appear
+                  enter-active-class="animated zoomInUp"
+                  leave-active-class="animated bounceOutRight">
+            <div  v-if="showSharing">
+              <h3>
+                <i>So enjoy the clicks, I'll be back soon</i>
+              </h3>
+            </div>
+          </transition>
+        </div>
       </div>
       <div style="
               position: relative
@@ -102,11 +97,9 @@
         >
           {{ alertMessage }}
         </v-alert></div>
-
       <!-- <main-content></main-content> -->
       <!-- <foot></foot> -->
     </v-app>
-
   </div>
 </template>
 
@@ -148,7 +141,7 @@ export default {
       // |this| properly refers to the person object
     }, delay);
     setTimeout(() => {
-      this.alert = false; // |this| properly refers to the person object
+      if ((this.alert = true)) this.alert = false; // |this| properly refers to the person object
     }, delay + displayFor);
   },
   methods: {
