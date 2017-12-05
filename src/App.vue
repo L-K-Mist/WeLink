@@ -23,8 +23,8 @@
           :hoverEffect="true"
           hoverMode="grab"
           :clickEffect="true"
-          clickMode="push"
-        ></vue-particles>
+          clickMode="push">
+        </vue-particles>
         <div name="welink-logo" v-if="showLogo" class="app-front" style="position: absolute;
                                               left: 10px;
                                               top: 10px;
@@ -36,8 +36,7 @@
             <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
           </div>
         </div>
-        <div class="app-front mb-0 pb-0"
-        style="display: inline-block;
+        <div class="app-front mb-0 pb-0" style="display: inline-block;
                         color: white;
                         text-shadow: 2px 2px 4px #000000;
                         font: 40px Teko, sans-serif;
@@ -52,53 +51,49 @@
             </h1>
           </div>
           </transition>
-
         </div>
-        <div class="app-front text-xs-center" style="position: absolute; top: 60%">
-          <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div v-if="showWatch">
-              <h2 class="text-xs-center" >
-                Watch This Space!
-              </h2>
-            </div>
-          </transition>
+          <div class="app-front text-xs-center" style="position: absolute; top: 60%">
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div v-if="showWatch">
+                <h2 class="text-xs-center" >
+                  Watch This Space!
+                </h2>
+              </div>
+            </transition>
 
-          <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div  v-if="showSharing">
-              <h3>
-                <i>We'll be sharing how we did it as we do it.</i>
-              </h3>
-            </div>
-          </transition>
-          <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div  v-if="showSharing">
-              <h3>
-                <i>So enjoy the clicks, I'll be back soon</i>
-              </h3>
-            </div>
-          </transition>
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div  v-if="showSharing">
+                <h3>
+                  <i>We'll be sharing how we did it as we do it.</i>
+                </h3>
+              </div>
+            </transition>
+
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div  v-if="showSharing">
+                <h3>
+                  <i>So enjoy the clicks, I'll be back soon</i>
+                </h3>
+              </div>
+            </transition>
+          </div>
+          <div style="position: relative">
+                <v-alert
+            color="success"
+            icon="check_circle"
+            transition="scale-transition"
+            dismissible
+            v-model="alert">
+            {{ alertMessage }}
+          </v-alert>
         </div>
       </div>
-      <div style="
-              position: relative
-              "><v-alert
-          color="success"
-          icon="check_circle"
-          transition="scale-transition"
-          dismissible
-          v-model="alert"
-
-        >
-          {{ alertMessage }}
-        </v-alert></div>
-      <!-- <main-content></main-content> -->
-      <!-- <foot></foot> -->
     </v-app>
   </div>
 </template>
