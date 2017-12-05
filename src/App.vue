@@ -1,94 +1,116 @@
 <template>
   <div id="app">
-    <h1 style="z-height: 99; positon: fixed; right: 10; color: white">{{ counter }}</h1>
+    <h1 style="color: white">{{ counter }}</h1>
+    <!-- there was some creative power of chance in this one -->
 
-    <!--<img src="./assets/logo.png">-->
-    <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
-    <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
-      <vue-particles
-        color="#ffffff"
-        :particleOpacity="0.7"
-        linesColor="#ffffff"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="5"
-        :linesWidth="2"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      ></vue-particles>
-      <div name="welink-logo" class="app-front" style="z-index: 1; position: fixed;
-                                            left: 10px;
-                                            top: 10px;
-                                            text-align: left" v-if="showLogo">
-        <img :src="welinkLogo" alt="Welink"
->
-        <div name="buttonPanel">
-          <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
-          <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
-          <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
+    <v-app>
+
+      <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
+
+      <!-- </div> -->
+
+      <!--<img src="./assets/logo.png">-->
+      <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
+      <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
+
+        <vue-particles
+          color="#ffffff"
+          :particleOpacity="0.7"
+          linesColor="#ffffff"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="5"
+          :linesWidth="2"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        ></vue-particles>
+        <div name="welink-logo" v-if="showLogo" class="app-front" style="position: absolute;
+                                              left: 10px;
+                                              top: 10px;
+                                              text-align: left" >
+          <img :src="welinkLogo" alt="Welink">
+          <div name="buttonPanel" style="opacity: 0.5; top: 20%; z-index: 1">
+            <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
+            <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
+            <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
+          </div>
 
         </div>
-
-      </div>
-      <div class="app-front mb-0 pb-0"
-      style="display: inline-block;
-                      color: white;
-                      text-shadow: 2px 2px 4px #000000;
-                      font: 40px Teko, sans-serif;
-                      align-items: center
-                      ">
-        <transition appear
-              enter-active-class="animated zoomInDown"
-              leave-active-class="animated bounceOutRight" v-if="showComingSoon">
-        <div>
-          <h1>
-            WeLink 2.0 Coming Soon...
-          </h1>
-        </div>
-        </transition>
-
-      </div>
-
-
-        <div class="app-front text-xs-center" style="position: absolute; top: 60%">
+        <div class="app-front mb-0 pb-0"
+        style="display: inline-block;
+                        color: white;
+                        text-shadow: 2px 2px 4px #000000;
+                        font: 40px Teko, sans-serif;
+                        align-items: center
+                        ">
           <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div v-if="showWatch">
-              <h2 class="text-xs-center" >
-                Watch This Space!
-              </h2>
-            </div>
+                enter-active-class="animated zoomInDown"
+                leave-active-class="animated bounceOutRight" v-if="showComingSoon">
+          <div>
+            <h1>
+              WeLink 2.0 Coming Soon...
+            </h1>
+          </div>
           </transition>
 
-          <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div  v-if="showSharing">
-              <h3>
-                <i>We'll be sharing how we did it as we do it.</i>
-              </h3>
-            </div>
-          </transition>
-                    <transition appear
-                  enter-active-class="animated zoomInUp"
-                  leave-active-class="animated bounceOutRight">
-            <div  v-if="showSharing">
-              <h3>
-                <i>So enjoy the clicks, I'll be back soon</i>
-              </h3>
-            </div>
-          </transition>
         </div>
-    </div>
-    <!-- <main-content></main-content> -->
-    <!-- <foot></foot> -->
+
+
+          <div class="app-front text-xs-center" style="position: absolute; top: 60%">
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div v-if="showWatch">
+                <h2 class="text-xs-center" >
+                  Watch This Space!
+                </h2>
+              </div>
+            </transition>
+
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div  v-if="showSharing">
+                <h3>
+                  <i>We'll be sharing how we did it as we do it.</i>
+                </h3>
+              </div>
+            </transition>
+            <transition appear
+                    enter-active-class="animated zoomInUp"
+                    leave-active-class="animated bounceOutRight">
+              <div  v-if="showSharing">
+                <h3>
+                  <i>So enjoy the clicks, I'll be back soon</i>
+                </h3>
+              </div>
+            </transition>
+
+          </div>
+      </div>
+      <div style="
+              position: relative
+              "><v-alert
+          color="success"
+          icon="check_circle"
+          transition="scale-transition"
+          dismissible
+          v-model="alert"
+
+        >
+          {{ alertMessage }}
+        </v-alert></div>
+
+      <!-- <main-content></main-content> -->
+      <!-- <foot></foot> -->
+    </v-app>
+
   </div>
 </template>
 
@@ -112,11 +134,20 @@ export default {
     showWatch: false,
     showSharing: false,
     drawer: null,
-    counter: 0
+    counter: 0,
+    //info alert change the text value then make true
+    alert: false,
+    alertMessage: "Have you tried left-clicking?",
+    onTimer: ""
   }),
   created: function() {
     //this.flipPics();
-    //this.onTimer = setInterval(this.logoOn, 1000);
+    setTimeout(() => {
+      this.alert = true; // |this| properly refers to the person object
+    }, 3000);
+    setTimeout(() => {
+      this.alert = false; // |this| properly refers to the person object
+    }, 9000);
   },
   methods: {
     // logoOn: function() {
@@ -154,16 +185,15 @@ export default {
           //this.showWatch = true;
           break;
         case 9:
-          break;
-        case 11:
           this.showComingSoon = false;
           this.showWatch = false;
           this.showSharing = false;
           break;
+        case 11:
+          break;
         case 12:
           break;
         case 13:
-
           break;
         case 14:
           break;
@@ -194,7 +224,8 @@ export default {
   },
 
   beforeDestroy() {
-    //clearInterval(this.onTimer);
+    clearInterval(this.onTimer);
+    this.counter = 0;
   }
 };
 </script>
