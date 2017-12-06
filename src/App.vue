@@ -25,22 +25,23 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-        <div name="welink-logo" v-if="showLogo" class="app-front" style="position: absolute;
+        <div name="welink-logo"  v-if="showLogo" class="app-front" style="position: absolute;
                                               left: 10px;
                                               top: 10px;
                                               text-align: left" >
-          <img :src="welinkLogo" alt="Welink">
-          <div name="buttonPanel" style="opacity: 0.5; top: 20%; z-index: 1">
+          <img :src="welinkLogo" alt="Welink" style="width: 200px" transition="slide-x-transition"  >
+          <!-- <div name="buttonPanel" style="opacity: 0.5; top: 20%; z-index: 1">
             <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
             <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
             <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
-          </div>
+          </div> -->
         </div>
         <div class="app-front mb-0 pb-0" style="display: inline-block;
                         color: white;
                         text-shadow: 2px 2px 4px #000000;
-                        font: 40px Teko, sans-serif;
-                        align-items: center
+                        font: 30px Teko, sans-serif;
+                        position: absolute;
+                        top: 20%
                         ">
           <transition appear
                 enter-active-class="animated zoomInDown"
@@ -52,7 +53,7 @@
           </div>
           </transition>
         </div>
-          <div class="app-front text-xs-center" style="position: absolute; top: 60%">
+          <div class="app-front text-xs-center" style="position: absolute; top: 50%">
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
@@ -76,7 +77,7 @@
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
-              <div  v-if="showSharing">
+              <div v-if="showSharing">
                 <h3>
                   <i>So enjoy the clicks, I'll be back soon</i>
                 </h3>
@@ -93,6 +94,23 @@
             {{ alertMessage }}
           </v-alert>
         </div>
+        <!-- SWITCHES -->
+        <div v-if="counter > 10" style="position: absolute; left: 1%; z-index: 8">
+          <v-layout column>
+            <v-switch light
+              v-model="showComingSoon">
+            </v-switch>
+            <v-switch light
+              v-model="showWatch">
+            </v-switch>
+            <v-switch light
+              v-model="showSharing">
+            </v-switch>
+          </v-layout>
+        </div>
+
+
+        <!-- <v-switch v-bind:label="`Switch 2: ${ex12.toString()}`" v-model="ex12"></v-switch> -->
       </div>
     </v-app>
   </div>
@@ -121,7 +139,7 @@ export default {
     counter: 0,
     //info alert change the text value then make true
     alert: false,
-    alertMessage: "Have you tried left-clicking?",
+    alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
   }),
   created: function() {
@@ -175,20 +193,20 @@ export default {
           //this.showWatch = true;
           break;
         case 9:
-          this.showComingSoon = false;
-          this.showWatch = false;
-          this.showSharing = false;
+          this.showLogo = true;
           break;
         case 11:
           break;
         case 12:
+          this.showComingSoon = false;
           break;
         case 13:
+          this.showWatch = false;
+          this.showSharing = false;
           break;
         case 14:
           break;
         case 15:
-          this.showLogo = true;
           break;
         case 10:
           //this.counter = 0;
