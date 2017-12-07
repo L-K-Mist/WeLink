@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <h1 style="color: white">{{ counter }}</h1>
+
+
     <!-- there was some creative power of chance in this one -->
     <v-app>
+
       <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
       <!-- </div> -->
       <!--<img src="./assets/logo.png">-->
       <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
       <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
+        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px" inline-block><h1 style="color: white">{{ counter }}</h1></div>
         <vue-particles
           color="#ffffff"
           :particleOpacity="0.7"
