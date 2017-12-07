@@ -167,7 +167,7 @@ h3 {
 }
 
 #particles-js {
-  background-image: url(./assets/starrysky.jpg?1512123088);
+  background-image: url(../assets/starrysky.jpg?1512123088);
   background-size: cover;
   position: absolute;
   top: 0;
