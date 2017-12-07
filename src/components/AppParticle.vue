@@ -49,11 +49,11 @@
           <transition appear
                 enter-active-class="animated zoomInDown"
                 leave-active-class="animated bounceOutRight" v-if="showComingSoon">
-          <div>
-            <h1>
-              WeLink 2.0 Coming Soon...
-            </h1>
-          </div>
+            <div>
+              <h1 @click="showComingSoon = false" style="cursor: pointer" >
+                WeLink 2.0 Coming Soon...
+              </h1>
+            </div>
           </transition>
         </div>
           <div class="app-front text-xs-center" style="position: absolute; top: 50%">
@@ -61,27 +61,25 @@
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
               <div v-if="showWatch">
-                <h2 class="text-xs-center" >
+                <h2 @click="showWatch = false" class="text-xs-center" style="cursor: pointer" >
                   Watch This Space!
                 </h2>
               </div>
             </transition>
-
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
               <div  v-if="showSharing">
-                <h3>
+                <h3 @click="showSharing = false" style="cursor: pointer" >
                   <i>We'll be sharing how we did it as we do it.</i>
                 </h3>
               </div>
             </transition>
-
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
-              <div v-if="showSharing">
-                <h3>
+              <div name="last-word" v-if="showSharing">
+                <h3  @click="showSharing = false" style="cursor: pointer" >
                   <i>So enjoy the clicks, I'll be back soon</i>
                 </h3>
               </div>
