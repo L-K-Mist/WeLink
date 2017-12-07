@@ -2,7 +2,7 @@
   <v-app id="app">
     <app-particle></app-particle>
 <div name="underHero">
-  <v-navigation-drawer app></v-navigation-drawer>
+  <!-- <v-navigation-drawer app></v-navigation-drawer> -->
   <v-toolbar app></v-toolbar>
   <v-content>
     <router-view>
