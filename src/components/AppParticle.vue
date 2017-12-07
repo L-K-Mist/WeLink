@@ -191,7 +191,7 @@ export default {
     },
     sendAlertMessage: function() {
       this.alertMessage =
-        "You can now scroll down to see - in essence - how this is done - or of course you can close me and go on making beautiful patters";
+        "You can now scroll down to see - in essence - how this is done - or of course you can close me and go on making beautiful patterns";
       this.alert = true;
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
@@ -238,6 +238,7 @@ export default {
           this.sendAlertMessage();
           break;
         case 15:
+          this.sendAlertMessage();
           break;
         case 16:
           this.resetCounter();
