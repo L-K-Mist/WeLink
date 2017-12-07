@@ -111,6 +111,7 @@
             <v-switch light
               v-model="showSharing">
             </v-switch>
+            <v-switch light @click="resetCounter" value="true" ></v-switch>
           </v-layout>
         </div>
       </div>
@@ -123,7 +124,9 @@
 </template>
 
 <script>
-//TODO SOON fix minimum necessary
+//TODO SOON
+// NEXT events
+// THEN make screen slide dynamically to get top of particle to become the banner
 //import Foot from "./components/Foot";
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
@@ -134,6 +137,11 @@ export default {
   components: {
     //Foot,
     //MainContent
+  },
+  events: {
+    grabThisEvent: function(msg) {
+      alert(msg);
+    }
   },
   data: () => ({
     msg: "Welcome to Your Vue.js App",
@@ -165,6 +173,12 @@ export default {
     }, delay + displayFor);
   },
   methods: {
+    resetCounter: function() {
+      return (this.counter = 0);
+    },
+    notify: function() {
+      this.$dispatch("grabThisEvent", "I'm a message!");
+    },
     // logoOn: function() {
     //   setTimeout(this.logoOff, 3000);
     //   return (this.showLogo = true);
@@ -174,6 +188,11 @@ export default {
     // },
     incrementCounter: function() {
       return this.counter++;
+    },
+    sendAlertMessage: function() {
+      this.alertMessage =
+        "You can now scroll down to see - in essence - how this is done - or of course you can close me and go on making beautiful patters";
+      this.alert = true;
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
     clickSwitchCase: function() {
@@ -189,6 +208,8 @@ export default {
           this.showComingSoon = true;
           break;
         case 4:
+          //DEBUGGING ONLY
+          this.notify;
           break;
         case 5:
           this.showWatch = true;
@@ -202,6 +223,8 @@ export default {
         case 9:
           this.showLogo = true;
           break;
+        case 10:
+          break;
         case 11:
           break;
         case 12:
@@ -212,28 +235,17 @@ export default {
           this.showSharing = false;
           break;
         case 14:
+          this.sendAlertMessage();
           break;
         case 15:
           break;
-        case 10:
+        case 16:
+          this.resetCounter();
           //this.counter = 0;
           break;
 
-          this.showLogo = false;
-
-          break;
-
-          this.showWatch = false;
-          this.showWatch = false;
-          break;
-          // case 8:
-          this.showComingSoon = true;
-          //   this.showWatch = true;
-          //   break;
-          this.showSharing = true;
-        // case 8:
-        //   this.showWatch = true;
-        //   break;
+        default:
+          console.log("switchCase error! fell through to default");
       }
     }
   },

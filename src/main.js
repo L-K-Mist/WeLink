@@ -15,6 +15,11 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  events: {
+    grabThisEvent: function (msg) {
+      console.log(msg);
+    },
+  },
   router,
   template: '<App/>',
   components: { App },

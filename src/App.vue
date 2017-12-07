@@ -25,7 +25,8 @@ export default {
   data: () => ({
     underHeroOn: false,
     counter: 0 //trying prop
-  })
+  }),
+
 };
 </script>
 
