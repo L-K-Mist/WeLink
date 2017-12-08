@@ -4,6 +4,7 @@
 <div name="underHero">
   <!-- <v-navigation-drawer app></v-navigation-drawer> -->
   <v-toolbar app></v-toolbar>
+  <under-the-hood ></under-the-hood>
   <v-content>
     <router-view>
       <v-container fluid></v-container>
@@ -17,16 +18,17 @@
 
 <script>
 import AppParticle from "./components/AppParticle";
+import UnderTheHood from "./components/UnderTheHood";
 
 export default {
   components: {
-    AppParticle
+    AppParticle,
+    UnderTheHood
   },
   data: () => ({
     underHeroOn: false,
     counter: 0 //trying prop
-  }),
-
+  })
 };
 </script>
 
