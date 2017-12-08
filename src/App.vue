@@ -3,15 +3,16 @@
     <app-particle></app-particle>
 <div name="underHero">
   <!-- <v-navigation-drawer app></v-navigation-drawer> -->
-  <v-toolbar app></v-toolbar>
-  <under-the-hood ></under-the-hood>
+  <!-- <v-toolbar app></v-toolbar> -->
+
   <v-content>
+    <!-- <under-the-hood></under-the-hood> -->
     <router-view>
       <v-container fluid></v-container>
     </router-view>
   </v-content>
 </div>
-    <v-footer app></v-footer>
+    <!-- <v-footer app></v-footer> -->
 
   </v-app>
 </template>
@@ -25,10 +26,7 @@ export default {
     AppParticle,
     UnderTheHood
   },
-  data: () => ({
-    underHeroOn: false,
-    counter: 0 //trying prop
-  })
+  data: () => ({})
 };
 </script>
 
