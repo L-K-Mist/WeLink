@@ -14,10 +14,10 @@
           </v-list>
         </v-menu>
       <v-dialog
-        v-model="dialog"
+        v-model="dialogue"
         max-width="80%"
         transition="dialog-bottom-transition"
-        :overlay=false
+        :overlay="false"
         scrollable
       >
         <v-card>

@@ -1,6 +1,9 @@
 <template>
   <v-app id="app">
-    <app-particle></app-particle>
+    <app-particle
+              :myName="name"
+
+              @nameWasReset="name = $event"></app-particle>
 <div name="underHero">
   <!-- <v-navigation-drawer app></v-navigation-drawer> -->
   <!-- <v-toolbar app></v-toolbar> -->
@@ -27,7 +30,8 @@ export default {
     UnderTheHood
   },
   data: () => ({
-    dialog: false,
+    name: "Max You Rock!!!",
+    //dialog: false,
     notifications: false,
     sound: true,
     widgets: false,

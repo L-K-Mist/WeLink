@@ -4,15 +4,13 @@
       <v-layout row justify-center>
         <v-btn color="primary" dark @click.stop="dialog = true">Open Dialog 1</v-btn>
         <v-menu bottom offset-y></v-menu>
-        <v-dialog
-          v-model="dialog"
+        <v-dialog  @openSesameIntro="dialogue = $event"
+          v-model="dialogue"
           max-width="80%"
           transition="dialog-bottom-transition"
           :overlay="false"
           scrollable>
-
           <v-card>
-
             <v-toolbar style="flex: 0 0 auto">
               <v-btn icon @click.native="dialog = false" dark>
                 <v-icon>close</v-icon>
@@ -48,7 +46,7 @@
 <script>
 export default {
   data: () => ({
-    dialog: false,
+    dialogue: false,
     notifications: false,
     sound: true,
     widgets: false,
@@ -61,7 +59,13 @@ export default {
       { text: "State 6" },
       { text: "State 7" }
     ]
-  })
+  }),
+  methods: {
+    showIntroDialogue: function() {
+      this.dialogue = true;
+      console.log("showIntroDialogue ran changing showDialogue to true");
+    }
+  }
 };
 </script>
 

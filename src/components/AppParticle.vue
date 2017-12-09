@@ -10,7 +10,6 @@
       <!--<img src="./assets/logo.png">-->
       <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
       <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
-        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px" inline-block><h1 style="color: white">{{ counter }}</h1></div>
         <vue-particles
           color="#ffffff"
           :particleOpacity="0.7"
@@ -28,17 +27,64 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-        <div name="welink-logo"  v-if="showLogo" class="app-front" style="position: absolute;
-                                              left: 10px;
-                                              top: 10px;
-                                              text-align: left" >
-          <img :src="welinkLogo" alt="Welink" style="width: 200px" transition="slide-x-transition"  >
-          <!-- <div name="buttonPanel" style="opacity: 0.5; top: 20%; z-index: 1">
-            <v-btn @click="showComingSoon=!showComingSoon">Toggle Coming Soon</v-btn>
-            <v-btn @click="showSharing=!showSharing">Toggle Show Sharing</v-btn>
-            <v-btn @click="showWatch=!showWatch">Toggle Watch This Space</v-btn>
-          </div> -->
-        </div>
+        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px; right: 10px" inline-block><h1 style="color: white">{{ myName }}{{ counter }}</h1></div>
+
+          <!-- <v-toolbar style="opacity: 0.1; position: absolute; top: 10px" dark color="primary" extended card>
+            <v-toolbar-side-icon></v-toolbar-side-icon>
+            <v-toolbar-title class="white--text" slot="extension">How We Did It</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <div>
+            <v-btn icon style="opacity: 1">
+              <v-icon style="opacity: 1">search</v-icon>
+            </v-btn>
+            </div>
+
+            <v-btn icon>
+              <v-icon>apps</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>refresh</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+          </v-toolbar> -->
+
+
+
+          <!-- START OF LOGO -->
+          <!-- ====================================================================== -->
+          <v-layout column>
+            <v-toolbar fluid class="transparent ml-0" name="dashboard-toolbar"  v-if="showLogo"  style="position: absolute;
+                                                  width: 100%;
+                                                  height: 70px;
+                                                  left: 10px;
+                                                  top: 0px;"
+                                                  >
+              <v-layout left fluid row wrap>
+                <v-flex xs8 name="welink-logo" style="position: absolute; left: 2px; top: 2px; width: 200px">
+                  <img :src="welinkLogo" alt="Welink" style="position: relative; left: 10px; width: 200px" transition="slide-x-transition"  >
+
+                </v-flex>
+                <v-spacer></v-spacer>
+                <v-flex name="right-buttons" style="positon: absolute; right: 0px">
+
+                  <v-btn @click="openIntroDialogue" color="primary" v-if="showComingSoon">
+                    See the Intro to How We Did This
+                  </v-btn>
+
+                </v-flex>
+                <v-flex>
+
+                </v-flex>
+              </v-layout>
+
+            </v-toolbar>
+
+
+          </v-layout>
+
+        </v-toolbar>
         <div class="app-front mb-0 pb-0" style="display: inline-block;
                         color: white;
                         text-shadow: 2px 2px 4px #000000;
@@ -95,9 +141,6 @@
             {{ alertMessage }}
           </v-alert>
         </div>
-
-
-
         <!-- SWITCHES -->
         <div v-if="counter > 10" style="position: absolute; left: 1%; z-index: 8"
         transition="slide-x-transition">
@@ -138,12 +181,13 @@ export default {
     //Foot,
     //MainContent
   },
-  events: {
-    grabThisEvent: function(msg) {
-      alert(msg);
-    }
-  },
+  // events: {
+  //   grabThisEvent: function(msg) {
+  //     alert(msg);
+  //   }
+  // },
   data: () => ({
+    dialogue: true,
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
     showLogo: false,
@@ -157,6 +201,11 @@ export default {
     alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
   }),
+  props: {
+    myName: {
+      type: String
+    }
+  },
   created: function() {
     let delay = 10000;
     let displayFor = 5000;
@@ -173,6 +222,14 @@ export default {
     }, delay + displayFor);
   },
   methods: {
+    openIntroDialogue: function() {
+      this.dialogue = true;
+      this.$emit("openSesameIntro", this.dialogue);
+    },
+    resetName: function() {
+      this.$emit("nameWasReset", this.myName);
+      console.log("nameWasReset Emitted from AppParticle");
+    },
     resetCounter: function() {
       return (this.counter = 0);
     },
@@ -228,7 +285,7 @@ export default {
         case 11:
           break;
         case 12:
-          this.showComingSoon = false;
+          // this.showComingSoon = false;
           break;
         case 13:
           this.showWatch = false;
@@ -241,7 +298,7 @@ export default {
           this.sendAlertMessage();
           break;
         case 16:
-          this.resetCounter();
+          //this.resetCounter();
           //this.counter = 0;
           break;
 
