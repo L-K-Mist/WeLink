@@ -27,7 +27,7 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px; right: 10px" inline-block><h1 style="color: white">{{ myName }}{{ counter }}</h1></div>
+        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px; right: 10px" inline-block><h1 style="color: white">{{ myName }}  {{ counter }}</h1></div>
 
           <!-- <v-toolbar style="opacity: 0.1; position: absolute; top: 10px" dark color="primary" extended card>
             <v-toolbar-side-icon></v-toolbar-side-icon>
@@ -67,13 +67,7 @@
 
                 </v-flex>
                 <v-spacer></v-spacer>
-                <v-flex name="right-buttons" style="positon: absolute; right: 0px">
 
-                  <v-btn @click="openIntroDialogue" color="primary" v-if="showComingSoon">
-                    See the Intro to How We Did This
-                  </v-btn>
-
-                </v-flex>
                 <v-flex>
 
                 </v-flex>
@@ -125,22 +119,22 @@
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
               <div name="last-word" v-if="showSharing">
-                <h3  @click="showSharing = false" style="cursor: pointer" >
+                <h3 @click="showSharing = false" style="cursor: pointer" >
                   <i>So enjoy the clicks, I'll be back soon</i>
                 </h3>
               </div>
             </transition>
           </div>
-          <div style="position: relative">
-                <v-alert
-            color="success"
-            icon="check_circle"
-            transition="scale-transition"
-            dismissible
-            v-model="alert">
-            {{ alertMessage }}
-          </v-alert>
-        </div>
+          <div style="position: absolute; top: 70px">
+            <v-alert
+                    color="success"
+                    icon="info_circle"
+                    transition="scale-transition"
+                    dismissible
+                    v-model="alert">
+              {{ alertMessage }}
+            </v-alert>
+          </div>
         <!-- SWITCHES -->
         <div v-if="counter > 10" style="position: absolute; left: 1%; z-index: 8"
         transition="slide-x-transition">
@@ -248,7 +242,7 @@ export default {
     },
     sendAlertMessage: function() {
       this.alertMessage =
-        "You can now scroll down to see - in essence - how this is done - or of course you can close me and go on making beautiful patterns";
+        "See the Primary Button above me? Click to learn more";
       this.alert = true;
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
