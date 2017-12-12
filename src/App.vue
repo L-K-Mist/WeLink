@@ -27,7 +27,8 @@ export default {
     UnderTheHood
   },
   data: () => ({
-    name: "Max You Rock!!!"
+    // name: "Max You Rock!!!"
+    name: ""
   })
 };
 </script>
