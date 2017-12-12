@@ -241,7 +241,7 @@ export default {
     },
     sendAlertMessage: function() {
       this.alertMessage =
-        "See the Primary Button above me? Click to learn more";
+        "See the Primary Button above me? Click to learn more, when you're done exploring and creating";
       this.alert = true;
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
