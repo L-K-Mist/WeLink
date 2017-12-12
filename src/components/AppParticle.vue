@@ -27,7 +27,7 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-        <div style="display: inline-block; z-index: 10; position: absolute; top: 10px; right: 10px" inline-block><h1 style="color: white">{{ myName }}  {{ counter }}</h1></div>
+
 
           <!-- <v-toolbar style="opacity: 0.1; position: absolute; top: 10px" dark color="primary" extended card>
             <v-toolbar-side-icon></v-toolbar-side-icon>
@@ -61,15 +61,16 @@
                                                   left: 10px;
                                                   top: 0px;"
                                                   >
-              <v-layout left fluid row wrap>
-                <v-flex xs8 name="welink-logo" style="position: absolute; left: 2px; top: 2px; width: 200px">
-                  <img :src="welinkLogo" alt="Welink" style="position: relative; left: 10px; width: 200px" transition="slide-x-transition"  >
-
+              <v-layout fluid row wrap>
+                <v-flex left xs4 name="welink-logo" >
+                  <img :src="welinkLogo" alt="Welink" style="position: absolute; left: 10px; width: 200px" transition="slide-x-transition"  >
                 </v-flex>
-                <v-spacer></v-spacer>
+                <v-flex xs4>
+                  <h1 style="color: white">{{ myName }}  {{ counter }}</h1>
+                </v-flex>
 
-                <v-flex>
-
+                <v-flex xs4>
+                  <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openIntroDialogue">See what this App is Built out of</v-btn>
                 </v-flex>
               </v-layout>
 
@@ -181,7 +182,6 @@ export default {
   //   }
   // },
   data: () => ({
-    dialogue: true,
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
     showLogo: false,
@@ -217,11 +217,10 @@ export default {
   },
   methods: {
     openIntroDialogue: function() {
-      this.dialogue = true;
-      this.$emit("openSesameIntro", this.dialogue);
+      this.$store.state.dialogue = true;
+      console.log(this.$store.state.dialogue);
     },
     resetName: function() {
-      this.$emit("nameWasReset", this.myName);
       console.log("nameWasReset Emitted from AppParticle");
     },
     resetCounter: function() {
