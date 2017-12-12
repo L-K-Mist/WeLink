@@ -5,7 +5,8 @@
       <v-layout row justify-center>
         <v-flex xs10 style="position: absolute; top: 100px">
           <v-dialog  v-model="dialogue"
-
+            :fullscreen="$vuetify.breakpoint.xsOnly"
+            max-width="80%"
             transition="dialog-bottom-transition"
             overlay="true"
             scrollable
