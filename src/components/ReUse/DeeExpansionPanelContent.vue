@@ -14,12 +14,7 @@
               contain
             ></v-card-media>
           </v-flex>
-          <v-flex xs7>
-            <div>
-              <div class="headline">Supermodel</div>
-              <div>Foster the People</div>
-            </div>
-          </v-flex>
+
         </v-layout>
       </v-container>
     </v-card>
