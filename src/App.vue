@@ -28,6 +28,7 @@ export default {
   },
   data: () => ({
     // name: "Max You Rock!!!"
+
     name: ""
   })
 };
