@@ -10,13 +10,7 @@
         align-center
         justify-center
       >
-        <v-avatar
-          tile="false"
-          :size="avatarSize"
-          class="grey lighten-4"
-        >
-          <img src="/static/apple-touch-icon-180x180.png" alt="avatar">
-        </v-avatar>
+
       </v-flex>
     </v-layout>
   </v-container>
@@ -25,15 +19,16 @@
 <script>
 export default {
   data: () => ({
-    slider: 56,
+    crossLength: 70,
     tile: false
   }),
 
   computed: {
     avatarSize() {
-      return `${this.slider}px`;
+      return `${this.crossLength}px`;
     }
-  }
+  },
+  props: ["src"]
 };
 </script>
 
