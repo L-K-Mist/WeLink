@@ -51,17 +51,13 @@
 
 <script>
 import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
-import vueLogo from "@/assets/public-logos/vue.png";
-import nodeLogo from "@/assets/public-logos/node.png";
-import vuetifyLogo from "@/assets/public-logos/vuetify.png";
-//import VueJs from "@/components/VueJs";
+
 export default {
   components: {
     AppExpansionPanel
     //VueJs
   },
   data: () => ({
-    vueLogo,
     selectedComponent: ""
   }),
   props: {},

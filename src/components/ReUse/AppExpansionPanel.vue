@@ -10,6 +10,9 @@
             <h2>{{ panel.title }}</h2>
           </div>
           <v-card>
+            <v-card-media>
+
+            </v-card-media>
             <v-card-text>
               <component :is="panel.selectedComponent"></component>
               </v-card-text>
