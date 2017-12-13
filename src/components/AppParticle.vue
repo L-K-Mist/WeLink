@@ -27,31 +27,6 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-
-
-          <!-- <v-toolbar style="opacity: 0.1; position: absolute; top: 10px" dark color="primary" extended card>
-            <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title class="white--text" slot="extension">How We Did It</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <div>
-            <v-btn icon style="opacity: 1">
-              <v-icon style="opacity: 1">search</v-icon>
-            </v-btn>
-            </div>
-
-            <v-btn icon>
-              <v-icon>apps</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>refresh</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>more_vert</v-icon>
-            </v-btn>
-          </v-toolbar> -->
-
-
-
           <!-- START OF LOGO -->
           <!-- ====================================================================== -->
           <v-layout column>
@@ -73,13 +48,8 @@
                   <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openIntroDialogue">See what this App is Built out of</v-btn>
                 </v-flex>
               </v-layout>
-
             </v-toolbar>
-
-
           </v-layout>
-
-        </v-toolbar>
         <div class="app-front mb-0 pb-0" style="display: inline-block;
                         color: white;
                         text-shadow: 2px 2px 4px #000000;

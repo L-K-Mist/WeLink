@@ -7,10 +7,10 @@
             v-for="panel in panels"
             v-bind:key="panel.uid"
             >
-          <div slot="header" >
+          <div slot="header" elevation-10>
             <h2>{{ panel.title }}</h2>
           </div>
-          <v-card>
+          <v-card elevation-5>
             <v-container fluid grid-list-lg>
               <v-layout row>
                 <v-flex xs5>
@@ -38,8 +38,8 @@
 
 <script>
 //next populate the rest of content to the rest of the panels
-import VueJs from "@/components/VueJs";
-import NodeJs from "@/components/NodeJs";
+import VueJs from "@/components/BaseHtml/VueJs";
+import NodeJs from "@/components/BaseHtml/NodeJs";
 import nodeLogoLarge from "@/assets/public-logos/node.png";
 import vueLogoLarge from "@/assets/public-logos/vue.png";
 

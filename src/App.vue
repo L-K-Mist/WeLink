@@ -9,7 +9,7 @@
         <under-the-hood></under-the-hood>
 
           <router-view>
-            <v-container fluid></v-container>
+
           </router-view>
         </v-content>
       </div>
