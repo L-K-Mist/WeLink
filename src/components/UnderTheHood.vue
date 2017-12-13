@@ -27,7 +27,7 @@
                         <!-- Start TeeSection -->
                 <v-layout row justify-center>
                   <v-flex xs12 lg10 mb-3>
-                    <dee-expansion-panel></dee-expansion-panel>
+                    <app-expansion-panel></app-expansion-panel>
                   </v-flex>
                 </v-layout>
 
@@ -50,31 +50,19 @@
 
 
 <script>
-import DeeExpansionPanel from "@/components/ReUse/DeeExpansionPanel";
+import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
 import vueLogo from "@/assets/public-logos/vue.png";
 import nodeLogo from "@/assets/public-logos/node.png";
 import vuetifyLogo from "@/assets/public-logos/vuetify.png";
-
+import VueJs from "@/components/VueJs";
 export default {
   components: {
-    DeeExpansionPanel
+    AppExpansionPanel,
+    VueJs
   },
   data: () => ({
     vueLogo,
-    items: [
-      {
-        title: "Click Me"
-      },
-      {
-        title: "Click Me"
-      },
-      {
-        title: "Click Me"
-      },
-      {
-        title: "Click Me 2"
-      }
-    ]
+    selectedComponent: ""
   }),
   props: {},
 
