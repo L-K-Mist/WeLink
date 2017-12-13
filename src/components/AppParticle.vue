@@ -296,11 +296,11 @@ body {
 }
 
 h1 {
-  font-size: 250%;
+  font-size: 200%;
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 150%;
 }
 
 p {
