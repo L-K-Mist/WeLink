@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+
     <v-container>
 
       <v-layout row justify-center>
@@ -12,8 +12,8 @@
             scrollable
             >
             <v-card>
-              <v-toolbar style="flex: 0 0 auto">
-                <v-btn icon @click.native="dialog = false" dark>
+              <v-toolbar dark color="primary darken-5"   style="flex: 0 0 auto">
+                <v-btn icon @click.native="dialogue = false" dark>
                   <v-icon>close</v-icon>
                 </v-btn>
                 <v-toolbar-title>How it's Made</v-toolbar-title>
@@ -45,7 +45,7 @@
 
     </v-container>
 
-  </v-app>
+
 </template>
 
 
@@ -54,11 +54,11 @@ import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
 import vueLogo from "@/assets/public-logos/vue.png";
 import nodeLogo from "@/assets/public-logos/node.png";
 import vuetifyLogo from "@/assets/public-logos/vuetify.png";
-import VueJs from "@/components/VueJs";
+//import VueJs from "@/components/VueJs";
 export default {
   components: {
-    AppExpansionPanel,
-    VueJs
+    AppExpansionPanel
+    //VueJs
   },
   data: () => ({
     vueLogo,

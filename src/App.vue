@@ -5,9 +5,9 @@
       <div name="underHero">
         <!-- <v-navigation-drawer app></v-navigation-drawer> -->
         <!-- <v-toolbar app></v-toolbar> -->
-
         <v-content>
-          <under-the-hood></under-the-hood>
+        <under-the-hood></under-the-hood>
+
           <router-view>
             <v-container fluid></v-container>
           </router-view>
