@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row justify-center>
       <v-flex xs12 lg10 mb-3>
-        <v-expansion-panel pullout>
+        <v-expansion-panel popout>
             <v-expansion-panel-content ripple>
               <div slot="header"><h2>VueJs  |  The Front-end Framework</h2></div>
               <dee-expansion-panel-content>

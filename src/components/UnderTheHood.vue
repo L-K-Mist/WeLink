@@ -10,6 +10,7 @@
             transition="dialog-bottom-transition"
             overlay="true"
             scrollable
+            style="opacity: 0.5"
             >
             <v-card>
               <v-toolbar dark color="primary darken-5"   style="flex: 0 0 auto">
@@ -27,15 +28,31 @@
                         <!-- Start TeeSection -->
                 <v-layout row justify-center>
                   <v-flex xs12 lg10 mb-3>
+                      <div class="text-xs-left">
+
+
+
+    <h1 id="what-s-under-the-hood">What&#39;s under the Hood</h1>
+    <p>We stand on the shoulders of Giants, and this website is no exception!</p>
+    <p>Afterthought: The simple act of saying thanks to the creators of the tools essential to this website&#39;s existence has proved more difficult than I thought - you pull on one thread and the whole of the internet seems to get pulled along with it. ;) Down the rabbit-hole we go then... </p>
+    <p>None of this would have been possible AND fast, without the total revamp of web development as we know it.</p>
+    <h1 id="soooo-big-thanks-to-">SOooo Big Thanks to:</h1>
+
+  </div>
                     <app-expansion-panel></app-expansion-panel>
                   </v-flex>
                 </v-layout>
 
-                <v-btn style="opacity: 1" color="primary" dark @click.stop="dialog2 = !dialog2">Open Dialog 2</v-btn>
+                <!-- <v-btn style="opacity: 1" color="primary" dark @click.stop="dialog2 = !dialog2">Open Dialog 2</v-btn>
                 <v-tooltip right>
                 <v-btn slot="activator">Tool Tip Activator</v-btn>
                   Tool Tip
-                </v-tooltip>
+                </v-tooltip> -->
+                <picker
+                    title="Pick your emoji…"
+                    emoji="point_up"
+                    >
+                </picker>
               <v-divider></v-divider>
               </v-card-text>
             </v-card>
@@ -51,9 +68,12 @@
 
 <script>
 import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
+import { Picker, Emoji } from "emoji-mart-vue";
 
 export default {
   components: {
+    picker: Picker,
+    emoji: Emoji,
     AppExpansionPanel
     //VueJs
   },

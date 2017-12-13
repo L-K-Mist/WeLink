@@ -1,9 +1,9 @@
 
 <template>
 <v-app>
-      <v-expansion-panel inset>
+      <v-expansion-panel popout>
         <v-expansion-panel-content
-            class="blue lighten-4 ma-0"
+            class="blue lighten-4 ma-1"
             v-for="panel in panels"
             v-bind:key="panel.uid"
             >
@@ -42,6 +42,7 @@ import VueJs from "@/components/BaseHtml/VueJs";
 import NodeJs from "@/components/BaseHtml/NodeJs";
 import nodeLogoLarge from "@/assets/public-logos/node.png";
 import vueLogoLarge from "@/assets/public-logos/vue.png";
+import vueLogo from "@/assets/public-logos/vueLogo.svg";
 
 export default {
   components: {
@@ -49,6 +50,7 @@ export default {
     appNodeJs: NodeJs
   },
   data: () => ({
+    vueLogo,
     vueLogoLarge,
     nodeLogoLarge,
     panels: [
@@ -56,13 +58,15 @@ export default {
         uid: 1,
         title: "VueJs | The Front-end Framework",
         selectedComponent: "appVueJs",
-        largeLogo: vueLogoLarge
+        largeLogo: vueLogoLarge,
+        miniLogo: vueLogo
       },
       {
         uid: 2,
         title: "NodeJs | The Ecosystem's Engine",
         selectedComponent: "appNodeJs",
-        largeLogo: nodeLogoLarge
+        largeLogo: nodeLogoLarge,
+        miniLogo: vueLogo
       }
     ]
   })
