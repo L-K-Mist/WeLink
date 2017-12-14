@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+<h1 id="material-design-s-buttons">Material Design&#39;s Buttons</h1>
+<p><strong>The User&#39;s Experience is in the Details</strong>
+  m
+So coming back to Google&#39;s Material Design Philosophy:
+The team behind Material Design recognized that there&#39;s always a gap between the user and the things they see on the screen - that gap is the physical glass between the user and the pixels.</p>
+<p>Next time you&#39;re on a google site, watch carefully how the buttons respond to a click or touch event.</p>
+<p>A ripple emanates from the point where you clicked/touched - not just from the center of the button, no: <em>from the point where contact was <strong>made</strong></em>. The button then pops up - sort of sucks up - to bridge the gap of the glass and touch your finger! The magic&#39;s in the details...</p>
+<p>[exampleButton] </p>
+<p>[need tech quotes ticker]
+[need orginised best-of-web links for all these subjects and libraries.]</p>
