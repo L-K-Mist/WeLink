@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1 id="the-awesome-nodejs-and-their-event-loop">The Awesome NodeJs and their Event Loop</h1>
-    <p>This site is not - strictly speaking - a Nodejs application; as it doesn&#39;t run off of a NodeJs Server. However, NodeJs is so fundamental to what&#39;s happening on the web right now that we can certainly regard NodeJs as an instrumental part of bringing this site into deployed status.</p>
-    <p><strong>NodeJS in a nutshell </strong>- [tough one, I&#39;ll have to come back to that later] sometimes you don&#39;t know what you think you know eh #smileyWink# </p>
-    <p>In essence NodeJs brings Javascript to the land of PC&#39;s and servers - For Web-Developers that means no need to learn other languages for server-side implementations. It&#39;s javascript from the server to the browser and on the device.</p>
-    <p>They took Chrome&#39;s aptly-named V8 Engine, and turned it into something that you install on your PC - not exactly; but almost like a second Operating System that speaks Javascript. In essence therefore translating (AKA compiling) into C++ Native... or something like that.</p>
-    <p>Yis I think this is so wrong, rather check out what better brains than mine have to say: </p>
-    <p>[Shortlist of Best Links Here]</p>
-    <p>Okay, so who&#39;ve we left out; let me see...</p>
-    <p>... ah yes, </p>
+    <h1 id="material-design-s-buttons">Material Design&#39;s Buttons</h1>
+    <p><strong>The User&#39;s Experience is in the Details</strong>
+      m
+    So coming back to Google&#39;s Material Design Philosophy:
+    The team behind Material Design recognized that there&#39;s always a gap between the user and the things they see on the screen - that gap is the physical glass between the user and the pixels.</p>
+    <p>Next time you&#39;re on a google site, watch carefully how the buttons respond to a click or touch event.</p>
+    <p>A ripple emanates from the point where you clicked/touched - not just from the center of the button, no: <em>from the point where contact was <strong>made</strong></em>. The button then pops up - sort of sucks up - to bridge the gap of the glass and touch your finger! The magic&#39;s in the details...</p>
+    <p>[exampleButton] </p>
+    <p>[need tech quotes ticker]
+    [need orginised best-of-web links for all these subjects and libraries.]</p>
+
 
 
   </div>
