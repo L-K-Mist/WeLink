@@ -6,6 +6,7 @@
               <p>
               For example: All these other packages and their dependencies are installed via Node's npm (Node Package Manager)
               </p>
+              <br>
               <h3>NodeJS in a Nutshell</h3>
 
 
@@ -15,6 +16,7 @@
               <p>
               The NodeJs creators took Chrome's aptly-named V8 Engine, and turned it into something that you install on your PC (not exactly; but almost like a second Operating System that speaks Javascript)
               </p>
+              <br>
               <h3>The Most Important Bit - The NodeJs Event Loop</h3>
 
 
@@ -23,12 +25,12 @@
               </p>
               <p>
               Note: When thinking about databases, servers, and browsers it is helpful to think of a restaurant.
-              </p><ul>
+              </p><ul class="ml-3">
 
               <li>The browser (and those precious User-Clicks) is the customer.
               <li>The server is the waitron.
               <li>The kitchen is the database.</li></ul>
-
+<br><br>
               <h4>How these modern websites/apps are different from my previous Joomla CMS > Cpanel > SQL websites.</h4>
 
 

@@ -1,11 +1,21 @@
 <template>
   <div>
-    <h1 id="netlify">Netlify</h1>
-    <p>for their (so far free  -  and Supa-Fast) cdn-hosting of this site.</p>
-    <p>Netlify in a nutshell: Netlify is a Helpful Static-Site Hosting solution and Content Delivery Network.</p>
-    <p>So yes, at the moment this is a server-less, <em>static</em> app, served via cdn (Content Delivery Network)</p>
-    <hr>
-    <p>Special Mentions: </p>
+
+<p>
+What netlify means to me is that I can host this site as a static site, delivered through a cdn (content delivery network) that spans the globe… and so far: FOR FREE!
+</p>
+<p>
+In order to attract developers aiming for world-wide, hundreds-of-views-per-day, high-traction apps; netlify offers the essentials of their hosting and deployment system FOR FREE until the site starts getting the kind of hits that would make its owner happy to pay.
+</p>
+<p>
+Like much of the freemium offers to startups; it's like the web-ecosystem is saying: "Go on, start using my business application and we'll ask you to start paying when it looks like you can afford it."
+</p>
+<p>
+Here is netlify's founder talking about what his team's thinking is offering to "the wild".
+</p>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uWTMEDEPw8c" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</p>
   </div>
 
 </template>

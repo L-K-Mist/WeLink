@@ -1,13 +1,13 @@
 
 <template>
     <v-layout justify-center column>
-      <v-expansion-panel popout class="blue lighten-4 ma-1">
+      <v-expansion-panel popout class="blue lighten-4 ma-4 pt-3 ">
         <v-expansion-panel-content
 
             v-for="panel in panels"
             v-bind:key="panel.uid"
             >
-          <div slot="header" elevation-10>
+          <div slot="header" class="elevation-5 ma-1">
             <v-container grid-list-sm>
               <v-layout align-center row spacer slot="header">
                   <v-flex xs1>
@@ -34,12 +34,14 @@
                   </v-card-text>
                 </v-flex>
                 <v-flex xs5>
+                  <a :href="panel.logoLink" target="_blank">
                   <v-card-media
                   :src="panel.largeLogo"
-                  height="250px"
+                  height="30%"
                   contain
-                  class="ma-0 pa-0"
+                  class="ma-0 pa-0 elevation-16"
                   ></v-card-media>
+                  </a>
                 </v-flex>
               </v-layout>
             </v-container>
@@ -57,8 +59,8 @@
 //next populate the rest of content to the rest of the panels
 import Vuetify from "@/components/BaseHtml/Vuetify";
 import VueJs from "@/components/BaseHtml/VueJs";
-import Babel from "@/components/BaseHtml/Babel";
 import Webpack from "@/components/BaseHtml/WebPack";
+import Babel from "@/components/BaseHtml/Babel";
 import NodeJs from "@/components/BaseHtml/NodeJs";
 import Netlify from "@/components/BaseHtml/Netlify";
 import Other from "@/components/BaseHtml/OtherAddons";
@@ -68,9 +70,8 @@ import VuetifyLogo from "@/assets/public-logos/vuetifymini.png";
 import VuetifyLogoLarge from "@/assets/public-logos/vuetifyLarge.png";
 import VueLogo from "@/assets/public-logos/vuelogo.png";
 import vueLogoLarge from "@/assets/public-logos/vue.png";
-import BabelLogo from "@/assets/public-logos/babel.png";
-
 import WebpackLogo from "@/assets/public-logos/webpackmini.png";
+import BabelLogo from "@/assets/public-logos/babel.png";
 import WebpackLogoLarge from "@/assets/public-logos/webpacklarge.png";
 import NodeLogo from "@/assets/public-logos/nodeButton.png";
 import nodeLogoLarge from "@/assets/public-logos/node.png";
@@ -82,8 +83,8 @@ export default {
   components: {
     appVuetify: Vuetify,
     appVueJs: VueJs,
-    appBabel: Babel,
     appWebpack: Webpack,
+    appBabel: Babel,
     appNodeJs: NodeJs,
     appNetlify: Netlify,
     appOther: Other
@@ -100,53 +101,61 @@ export default {
         title: "Vuetify | The Face of the Front-end",
         selectedComponent: "appVuetify",
         largeLogo: VuetifyLogoLarge,
-        miniLogo: VuetifyLogo
+        miniLogo: VuetifyLogo,
+        logoLink: "https://next.vuetifyjs.com/"
       },
       {
         uid: 20,
         title: "VueJs | The Browser-side Framework",
         selectedComponent: "appVueJs",
         largeLogo: vueLogoLarge,
-        miniLogo: VueLogo
+        miniLogo: VueLogo,
+        logoLink: "https://vuejs.org/"
       },
 
       {
         uid: 30,
-        title: "Babel | The Translator",
-        selectedComponent: "appBabel",
-        largeLogo: BabelLogo,
-        miniLogo: BabelLogo
-      },
-      {
-        uid: 35,
         title: "WebPack | The Compressor",
         selectedComponent: "appWebpack",
         largeLogo: WebpackLogoLarge,
-        miniLogo: WebpackLogo
+        miniLogo: WebpackLogo,
+        logoLink: "https://webpack.js.org"
+      },
+      {
+        uid: 35,
+        title: "Babel | The Translator",
+        selectedComponent: "appBabel",
+        largeLogo: BabelLogo,
+        miniLogo: BabelLogo,
+        logoLink: "https://babeljs.io/"
       },
       {
         uid: 40,
         title: "NodeJs | The Ecosystem's Engine",
         selectedComponent: "appNodeJs",
         largeLogo: nodeLogoLarge,
-        miniLogo: NodeLogo
+        miniLogo: NodeLogo,
+        logoLink: "https://nodejs.org/en/"
       },
       {
         uid: 50,
         title: "Netlify | The App-Shell Host",
         selectedComponent: "appNetlify",
         largeLogo: NetlifyLogoLarge,
-        miniLogo: NetlifyLogo
+        miniLogo: NetlifyLogo,
+        logoLink: "https://www.netlify.com/"
       },
       {
         uid: 60,
         title: "Other Add-ons | The Funnest Stuff",
         selectedComponent: "appOther",
         largeLogo: OtherLogo,
-        miniLogo: OtherLogo
+        miniLogo: OtherLogo,
+        logoLink: "https://www.powtoon.com/"
       }
     ]
-  })
+  }),
+  methods: {}
 };
 </script>
 

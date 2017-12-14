@@ -2,7 +2,7 @@
   <v-app id="app">
     <app-particle
               :myName="name"></app-particle>
-      <div name="underHero">
+
         <!-- <v-navigation-drawer app></v-navigation-drawer> -->
         <!-- <v-toolbar app></v-toolbar> -->
         <v-content>
@@ -12,7 +12,7 @@
 
           </router-view>
         </v-content>
-      </div>
+
     <!-- <v-footer app></v-footer> -->
   </v-app>
 </template>

@@ -1,6 +1,6 @@
 <template>
 
-    <v-container>
+    <v-container style="position: relative">
 
       <v-layout row justify-center>
         <v-flex xs10>
@@ -43,11 +43,7 @@
                 <v-btn slot="activator">Tool Tip Activator</v-btn>
                   Tool Tip
                 </v-tooltip> -->
-                <picker
-                    title="Pick your emoji…"
-                    emoji="point_up"
-                    >
-                </picker>
+
               <v-divider></v-divider>
               </v-card-text>
             </v-card>
