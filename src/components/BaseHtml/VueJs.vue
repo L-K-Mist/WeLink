@@ -10,10 +10,7 @@
         </ul>
         <br>
         <p>React and Angular (of Facebook and Gmail fame respectively) are great, but sometimes tight budgets and small teams result in even more frugal and inclusive code. </p>
-        <p>Plus there&#39;s an air of victory around Evan You&#39;s creation - David and Goliath vibes... although, as an ex-employee, he seems to get Much-Love from Google.
-          <emoji emoji="heart"
-                :size="18">
-</emoji></p>
+        <p>Plus there&#39;s an air of victory around Evan You&#39;s creation - David and Goliath vibes... although, as an ex-employee, he seems to get Much-Love from Google.<emoji  emoji="heart" :size="18"></emoji>        </p>
         <p>Although each is great, capable of producing similarly functional websites/apps; I find that Vue is, nimbler, independent, and - for me - easier to learn.</p>
 
   </div>

@@ -20,19 +20,18 @@
                 <v-toolbar-title>How it's Made</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-
                   </v-menu>
                 </v-toolbar-items>
               </v-toolbar>
-              <v-card-text class="pa-30 text-xs-justify-left" >
+              <v-card-text color="primary lighten-2" class="pa-30 text-xs-justify-left" >
                         <!-- Start TeeSection -->
                 <v-layout row justify-center>
                   <v-flex xs12 lg10 mb-3>
                       <div class="text-xs-left">
                         <h1 id="what-s-under-the-hood">What&#39;s under the Hood</h1>
                         <p>We stand on the shoulders of Giants, and this website is no exception!</p>
-                        <p>Afterthought: The simple act of saying thanks to the creators of the tools essential to this website&#39;s existence has proved more difficult than I thought - you pull on one thread and the whole of the internet seems to get pulled along with it. ;) Down the rabbit-hole we go then... </p>
-                        <p>None of this would have been possible AND fast, without the total revamp of web development as we know it.</p>
+                        <p>The simple act of saying thanks to the creators of the tools essential to this website&#39;s existence has proved more difficult than I thought - you pull on one thread and the whole of the internet seems to get pulled along with it. <emoji class="ma-0" emoji="wink" :size="18"></emoji> Down the rabbit-hole we go then... </p>
+                        <p>None of this would have been possible AND fast, without the total revamp of the web development ecosystem. A re-think that is being driven by projects like those you'll see below.</p>
                         <h1 id="soooo-big-thanks-to-">SOooo Big Thanks to:</h1>
                       </div>
                     <app-expansion-panel></app-expansion-panel>

@@ -1,12 +1,31 @@
 
 <template>
   <div>
-    <h1 id="vuetify">Vuetify</h1>
-    <p>for it&#39;s implementation of Google&#39;s Beautiful Material Design Spec.</p>
-    <p><strong>Vuetify in a nutshell:</strong> Vuetify provides the button, card, and slider components generally used in this site. These components follow Google&#39;s Material Design Spec. Reading through their documentation is like a crash-course in design itself - Thank Google! </p>
-    <hr>
-    <h1 id="vue-particle">vue-particle</h1>
-    <p>for the playful Particle Component you were playing with on the Landing Page Hero Element.</p>
+
+
+
+<h3>Vuetify in a nutshell: </h3>
+<p>
+Vuetify provides the full set of baseline UI components an app developer would need.
+</p>
+<p>
+For example all the navigation, button, card, and slider components used in this site.
+</p>
+<p>
+This sentence you're reading is inside a Material Design Expansion-Panel, brought to Vue by Vuetify. ::smile::
+</p>
+<h4>What is Material Design?</h4>
+
+
+<p>
+In a word: "Smart Paper"
+</p>
+<p>
+Material Design is a set of actionable website design guidelines provided by Google. It's the stuff you see all the time on various google and android apps. The amount of thought that has gone into it is amazing.
+</p>
+<p>
+The design premise in my own words: Devices can be intimidating, therefore we need to mix the known with the unknown. People are used to doing similar kinds of tasks on paper, therefore let's make our websites and apps like paper. Smart Paper.
+</p>
 
   </div>
 </template>

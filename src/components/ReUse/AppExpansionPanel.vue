@@ -55,18 +55,38 @@
 
 <script>
 //next populate the rest of content to the rest of the panels
+import Vuetify from "@/components/BaseHtml/Vuetify";
 import VueJs from "@/components/BaseHtml/VueJs";
+import Babel from "@/components/BaseHtml/Babel";
+import Webpack from "@/components/BaseHtml/WebPack";
 import NodeJs from "@/components/BaseHtml/NodeJs";
+import Netlify from "@/components/BaseHtml/Netlify";
+import Other from "@/components/BaseHtml/OtherAddons";
+
 //import AppAvatar from "@/components/ReUse/AppAvatar";
-import nodeLogoLarge from "@/assets/public-logos/node.png";
-import NodeLogo from "@/assets/public-logos/nodeButton.png";
-import vueLogoLarge from "@/assets/public-logos/vue.png";
+import VuetifyLogo from "@/assets/public-logos/vuetifymini.png";
+import VuetifyLogoLarge from "@/assets/public-logos/vuetifyLarge.png";
 import VueLogo from "@/assets/public-logos/vuelogo.png";
+import vueLogoLarge from "@/assets/public-logos/vue.png";
+import BabelLogo from "@/assets/public-logos/babel.png";
+
+import WebpackLogo from "@/assets/public-logos/webpackmini.png";
+import WebpackLogoLarge from "@/assets/public-logos/webpacklarge.png";
+import NodeLogo from "@/assets/public-logos/nodeButton.png";
+import nodeLogoLarge from "@/assets/public-logos/node.png";
+import NetlifyLogo from "@/assets/public-logos/netlifymini.png";
+import NetlifyLogoLarge from "@/assets/public-logos/netlifylarge.png";
+import OtherLogo from "@/assets/public-logos/funstuff.jpg";
 
 export default {
   components: {
+    appVuetify: Vuetify,
     appVueJs: VueJs,
-    appNodeJs: NodeJs
+    appBabel: Babel,
+    appWebpack: Webpack,
+    appNodeJs: NodeJs,
+    appNetlify: Netlify,
+    appOther: Other
     //appAvatar: AppAvatar
   },
   data: () => ({
@@ -76,18 +96,54 @@ export default {
     tile: true,
     panels: [
       {
-        uid: 1,
-        title: "VueJs | The Front-end Framework",
+        uid: 10, //uid's jumping in tens so that I can plug more content inbetween these without having to relink a bunch of code
+        title: "Vuetify | The Face of the Front-end",
+        selectedComponent: "appVuetify",
+        largeLogo: VuetifyLogoLarge,
+        miniLogo: VuetifyLogo
+      },
+      {
+        uid: 20,
+        title: "VueJs | The Browser-side Framework",
         selectedComponent: "appVueJs",
         largeLogo: vueLogoLarge,
         miniLogo: VueLogo
       },
+
       {
-        uid: 2,
+        uid: 30,
+        title: "Babel | The Translator",
+        selectedComponent: "appBabel",
+        largeLogo: BabelLogo,
+        miniLogo: BabelLogo
+      },
+      {
+        uid: 35,
+        title: "WebPack | The Compressor",
+        selectedComponent: "appWebpack",
+        largeLogo: WebpackLogoLarge,
+        miniLogo: WebpackLogo
+      },
+      {
+        uid: 40,
         title: "NodeJs | The Ecosystem's Engine",
         selectedComponent: "appNodeJs",
         largeLogo: nodeLogoLarge,
         miniLogo: NodeLogo
+      },
+      {
+        uid: 50,
+        title: "Netlify | The App-Shell Host",
+        selectedComponent: "appNetlify",
+        largeLogo: NetlifyLogoLarge,
+        miniLogo: NetlifyLogo
+      },
+      {
+        uid: 60,
+        title: "Other Add-ons | The Funnest Stuff",
+        selectedComponent: "appOther",
+        largeLogo: OtherLogo,
+        miniLogo: OtherLogo
       }
     ]
   })
