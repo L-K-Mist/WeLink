@@ -13,7 +13,7 @@
               bottom
               right
               fab
-               v-show="!hidden"
+               v-show="showFab"
             >
               <v-icon x-large>favorite_border</v-icon>
             </v-btn>
@@ -171,6 +171,7 @@ export default {
     showComingSoon: false,
     showWatch: false,
     showSharing: false,
+    showFab: true,
     //drawer: null,
     counter: 0,
     //info alert change the text value then make true
