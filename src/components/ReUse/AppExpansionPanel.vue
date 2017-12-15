@@ -56,7 +56,7 @@
 //next populate the rest of content to the rest of the panels
 import Vuetify from "@/components/BaseHtml/Vuetify";
 import VueJs from "@/components/BaseHtml/VueJs";
-import Webpack from "@/components/BaseHtml/WebPack";
+import Webpack from "@/components/BaseHtml/Webpack";
 import Babel from "@/components/BaseHtml/Babel";
 import NodeJs from "@/components/BaseHtml/NodeJs";
 import Netlify from "@/components/BaseHtml/Netlify";
