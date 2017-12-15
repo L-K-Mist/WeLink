@@ -20,7 +20,7 @@
                 <v-toolbar-title>How it's Made</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-                  </v-menu>
+
                 </v-toolbar-items>
               </v-toolbar>
               <v-card-text color="primary lighten-2" class="pa-30 text-xs-justify-left" >
@@ -34,7 +34,7 @@
                         <p>None of this would have been possible AND fast, without the total revamp of the web development ecosystem that's happening right now. A re-think that is being driven by projects like those you'll see below.</p>
                         <h1 id="soooo-big-thanks-to-">SOooo Big Thanks to:</h1>
                       </div>
-                    <app-expansion-panel></app-expansion-panel>
+                    <app-expansion-panel style="positon: absolute; top: 10px" ></app-expansion-panel>
                   </v-flex>
                 </v-layout>
 
@@ -52,7 +52,6 @@
       </v-layout>
 
     </v-container>
-
 
 </template>
 
@@ -82,6 +81,12 @@ export default {
         this.$store.state.dialogue = dialogue;
       }
     }
+  },
+  destroyed() {
+    // Perform the teardown procedure for someLeakyProperty.
+    // (In this case, effectively nothing)
+    this.$store.state.seeLoveFab = true;
+    console.log(this.$store.state.seeLoveFab);
   }
 };
 </script>

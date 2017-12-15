@@ -32,9 +32,8 @@ The design premise in my own words: Devices can be intimidating, therefore we ne
 
 </p>
 <p>
-  There's so much I'd like to do better on this site, but as they say in material design:
+  There's so much I'd like to do better on this site, but as they say in material design:</p>
    <p class="blockquote"><em>"Design is Never Done"</em></p>
 
-</p>
   </div>
 </template>

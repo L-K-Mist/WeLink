@@ -4,7 +4,7 @@ import Vue from 'vue'
 import VueParticles from 'vue-particles'
 import Vuetify from 'vuetify'
 import { store } from './store/store'
-import { Picker } from 'emoji-mart-vue'
+import { Picker, Emoji } from 'emoji-mart-vue'
 import 'vuetify/dist/vuetify.css'
 import App from './App'
 import router from './router'
@@ -20,5 +20,9 @@ new Vue({
   store,
   router,
   template: '<App/>',
-  components: { App },
+  components: {
+    App,
+    emoji: Emoji,
+    picker: Picker,
+  },
 })

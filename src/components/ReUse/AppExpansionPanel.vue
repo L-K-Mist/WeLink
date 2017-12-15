@@ -1,10 +1,9 @@
 
 <template>
   <v-app>
-    <v-layout justify-center column>
+    <v-layout justify-top column>
       <v-expansion-panel popout class="blue lighten-4 ma-4 pt-3 ">
         <v-expansion-panel-content
-
             v-for="panel in panels"
             v-bind:key="panel.uid"
             >
@@ -49,10 +48,6 @@
           </v-card>
         </v-expansion-panel-content>
       </v-expansion-panel>
-
-
-
-
     </v-layout>
   </v-app>
 </template>

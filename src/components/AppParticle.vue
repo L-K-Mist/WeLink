@@ -4,8 +4,10 @@
 
     <!-- there was some creative power of chance in this one -->
     <v-app>
-
-            <v-btn style="position: absolute; bottom: 60px; right: 60px"
+ <transition appear
+                    enter-active-class="animated bounceInDown"
+                    leave-active-class="animated wobble">
+            <v-btn class="elevation-5" style="position: absolute; bottom: 60px; right: 60px"
               color="pink"
               dark
               large
@@ -14,9 +16,12 @@
               right
               fab
                v-show="showFab"
+               @click="openTeeDialogue"
             >
               <v-icon x-large>favorite_border</v-icon>
             </v-btn>
+
+</transition>
 
       <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
       <!-- </div> -->
@@ -115,7 +120,8 @@
                     icon="info_circle"
                     transition="slide-x-reverse-transition"
                     dismissible
-                    v-model="alert">
+                    v-model="alert"
+                    class="elevation-20">
               {{ alertMessage }}
             </v-alert>
           </v-flex>
@@ -171,7 +177,7 @@ export default {
     showComingSoon: false,
     showWatch: false,
     showSharing: false,
-    showFab: true,
+
     //drawer: null,
     counter: 0,
     //info alert change the text value then make true
@@ -179,6 +185,11 @@ export default {
     alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
   }),
+  computed: {
+    showFab: function() {
+      return this.$store.state.seeLoveFab;
+    }
+  },
   props: {
     myName: {
       type: String
@@ -200,9 +211,11 @@ export default {
     }, delay + displayFor);
   },
   methods: {
+    openTeeDialogue: function() {
+      this.$store.state.teeDialogue = true;
+    },
     openIntroDialogue: function() {
       this.$store.state.dialogue = true;
-      console.log(this.$store.state.dialogue);
     },
     resetName: function() {
       console.log("nameWasReset Emitted from AppParticle");
@@ -274,7 +287,10 @@ export default {
         case 15:
           this.sendAlertMessage();
           break;
-        case 16:
+        case 17:
+          this.$store.state.seeLoveFab = true;
+          console.log("seeLoveFab updated from count");
+          console.log(this.$store.state.seeLoveFab);
           //this.resetCounter();
           //this.counter = 0;
           break;
