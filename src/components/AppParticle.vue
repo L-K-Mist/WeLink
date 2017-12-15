@@ -5,6 +5,19 @@
     <!-- there was some creative power of chance in this one -->
     <v-app>
 
+            <v-btn style="position: absolute; bottom: 60px; right: 60px"
+              color="pink"
+              dark
+              large
+              absolute
+              bottom
+              right
+              fab
+               v-show="!hidden"
+            >
+              <v-icon x-large>favorite_border</v-icon>
+            </v-btn>
+
       <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
       <!-- </div> -->
       <!--<img src="./assets/logo.png">-->
@@ -96,16 +109,16 @@
               </div>
             </transition>
           </div>
-          <div style="position: absolute; top: 70px">
-            <v-alert
+          <v-flex >
+            <v-alert style="position: absolute; top: 70px; right: 10px"
                     color="success"
                     icon="info_circle"
-                    transition="scale-transition"
+                    transition="slide-x-reverse-transition"
                     dismissible
                     v-model="alert">
               {{ alertMessage }}
             </v-alert>
-          </div>
+          </v-flex>
         <!-- SWITCHES -->
         <div v-if="counter > 10" style="position: absolute; left: 1%; z-index: 8"
         transition="slide-x-transition">
@@ -255,7 +268,7 @@ export default {
           this.showSharing = false;
           break;
         case 14:
-          this.sendAlertMessage();
+          //this.sendAlertMessage();
           break;
         case 15:
           this.sendAlertMessage();

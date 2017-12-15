@@ -1,10 +1,8 @@
 <template>
-
-    <v-container style="position: relative">
-
+    <v-container>
       <v-layout row justify-center>
         <v-flex xs10>
-          <v-dialog  v-model="dialogue"
+          <v-dialog v-model="dialogue"
             :fullscreen="$vuetify.breakpoint.xsOnly"
             max-width="80%"
             transition="dialog-bottom-transition"
@@ -17,7 +15,7 @@
                 <v-btn icon @click.native="dialogue = false" dark>
                   <v-icon>close</v-icon>
                 </v-btn>
-                <v-toolbar-title>How it's Made</v-toolbar-title>
+                <v-toolbar-title>Personal Thanks to Some Special People</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
                   </v-menu>
@@ -52,38 +50,13 @@
       </v-layout>
 
     </v-container>
-
-
 </template>
 
-
 <script>
-import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
-import { Picker, Emoji } from "emoji-mart-vue";
-
+import FamPic from "@/assets/tee-fam";
 export default {
-  components: {
-    picker: Picker,
-    emoji: Emoji,
-    AppExpansionPanel
-    //VueJs
-  },
   data: () => ({
-    selectedComponent: ""
-  }),
-  props: {},
-
-  computed: {
-    dialogue: {
-      get() {
-        return this.$store.state.dialogue;
-      },
-      set(dialogue) {
-        this.$store.state.dialogue = dialogue;
-      }
-    }
-  }
+    famPic: FamPic
+  })
 };
 </script>
-
-

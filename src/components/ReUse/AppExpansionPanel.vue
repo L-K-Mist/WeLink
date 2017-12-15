@@ -1,5 +1,6 @@
 
 <template>
+  <v-app>
     <v-layout justify-center column>
       <v-expansion-panel popout class="blue lighten-4 ma-4 pt-3 ">
         <v-expansion-panel-content
@@ -53,6 +54,7 @@
 
 
     </v-layout>
+  </v-app>
 </template>
 
 <script>
