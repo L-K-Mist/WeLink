@@ -13,9 +13,13 @@
     <p>
     Here is netlify's founder talking about what his team's thinking is offering to "the wild".
     </p>
-    <p>
 
-    </p>
+    <youtube video-id="uWTMEDEPw8c"></youtube>
+
+
+
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/uWTMEDEPw8c" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
   </v-flex>
 
 </template>

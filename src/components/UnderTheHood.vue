@@ -30,7 +30,7 @@
                       <div class="text-xs-left">
                         <h1 id="what-s-under-the-hood">What&#39;s under the Hood</h1>
                         <p>We stand on the shoulders of Giants, and this website is no exception!</p>
-                        <p>The simple act of saying thanks to the creators of the tools essential to this website&#39;s existence has proved more difficult than I thought - you pull on one thread and the whole of the internet seems to get pulled along with it. <emoji class="ma-0" emoji="wink" :size="18"></emoji> Down the rabbit-hole we go then... </p>
+                        <p>The simple act of saying thanks to the creators of the tools essential to this website&#39;s existence has proved more difficult than I thought - you pull on one thread and a whole slice of the internet seems to get pulled along with it. <emoji class="ma-0" emoji="wink" :size="18"></emoji> Down the rabbit-hole we go then... </p>
                         <p>None of this would have been possible AND fast, without the total revamp of the web development ecosystem that's happening right now. A re-think that is being driven by projects like those you'll see below.</p>
                         <h1 id="soooo-big-thanks-to-">SOooo Big Thanks to:</h1>
                       </div>

@@ -8,9 +8,11 @@ import { Picker, Emoji } from 'emoji-mart-vue'
 import 'vuetify/dist/vuetify.css'
 import App from './App'
 import router from './router'
+import VueYouTubeEmbed from "vue-youtube-embed";
 
 Vue.use(Vuetify)
 Vue.use(VueParticles)// that's the plugin with that kiff background!
+Vue.use(VueYouTubeEmbed)
 
 Vue.config.productionTip = false
 
