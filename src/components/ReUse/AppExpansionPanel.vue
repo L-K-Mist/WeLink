@@ -1,7 +1,6 @@
 
 <template>
-  <v-app>
-    <v-layout justify-top column>
+  <v-layout column>
       <v-expansion-panel popout class="blue lighten-4 ma-4 pt-3 ">
         <v-expansion-panel-content
             v-for="panel in panels"
@@ -49,7 +48,6 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-layout>
-  </v-app>
 </template>
 
 <script>

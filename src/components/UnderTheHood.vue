@@ -20,7 +20,6 @@
                 <v-toolbar-title>How it's Made</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-
                 </v-toolbar-items>
               </v-toolbar>
               <v-card-text color="primary lighten-2" class="pa-30 text-xs-justify-left" >
@@ -34,17 +33,15 @@
                         <p>None of this would have been possible AND fast, without the total revamp of the web development ecosystem that's happening right now. A re-think that is being driven by projects like those you'll see below.</p>
                         <h1 id="soooo-big-thanks-to-">SOooo Big Thanks to:</h1>
                       </div>
-                    <app-expansion-panel style="positon: absolute; top: 10px" ></app-expansion-panel>
+                    <app-expansion-panel></app-expansion-panel>
+                  <br><br>
+                      <div class="text-xs-left" style="position: relative; top: -20px">
+                        <h1>What's Next for this Site</h1>
+                        <p>This site is intended to be a showcase of all that I've recently learnt. With that in mind, you can soon expect to see some integration with Arduino, and some fun <a href="https://p5js.org/libraries/" target="blank">P5js</a> stuff.</p>
+                        <p>To execute the <a href="https://www.arduino.cc/arduino" target="blank">arduino</a> integration, this app-shell will need to "talk" to a server. For that we'll use <a href="https://feathersjs.com/" target="blank">feathersJs</a>.</p>
+                      </div>
                   </v-flex>
                 </v-layout>
-
-                <!-- <v-btn style="opacity: 1" color="primary" dark @click.stop="dialog2 = !dialog2">Open Dialog 2</v-btn>
-                <v-tooltip right>
-                <v-btn slot="activator">Tool Tip Activator</v-btn>
-                  Tool Tip
-                </v-tooltip> -->
-
-              <v-divider></v-divider>
               </v-card-text>
             </v-card>
           </v-dialog>
