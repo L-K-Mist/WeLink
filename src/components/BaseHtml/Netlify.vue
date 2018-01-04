@@ -14,18 +14,20 @@
     Here is netlify's founder talking about what his team's thinking is offering to "the wild".
     </p>
 
-
+    <template>
     <youtube video-id="uWTMEDEPw8c"></youtube>
+    </template>
 
 
 
 
-    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/uWTMEDEPw8c" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
   </v-flex>
 
 </template>
 
 <script>
+// todo use this https://github.com/anteriovieira/vue-youtube instead of the existing lib
+// https://developers.google.com/youtube/iframe_api_reference#top_of_page
 import { Emoji } from "emoji-mart-vue";
 
 export default {
