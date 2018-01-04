@@ -60,7 +60,7 @@ import Webpack from "@/components/BaseHtml/Webpack";
 import Babel from "@/components/BaseHtml/Babel";
 import NodeJs from "@/components/BaseHtml/NodeJs";
 import Netlify from "@/components/BaseHtml/Netlify";
-import Other from "@/components/BaseHtml/OtherAddons";
+import Particle from "@/components/BaseHtml/AppParticle";
 
 //import AppAvatar from "@/components/ReUse/AppAvatar";
 import VuetifyLogo from "@/assets/public-logos/vuetifymini.png";
@@ -74,7 +74,7 @@ import NodeLogo from "@/assets/public-logos/nodeButton.png";
 import nodeLogoLarge from "@/assets/public-logos/node.png";
 import NetlifyLogo from "@/assets/public-logos/netlifymini.png";
 import NetlifyLogoLarge from "@/assets/public-logos/netlifylarge.png";
-import OtherLogo from "@/assets/public-logos/funstuff.jpg";
+import ParticleLogo from "@/assets/public-logos/vue-particles.png";
 
 export default {
   components: {
@@ -84,7 +84,7 @@ export default {
     appBabel: Babel,
     appNodeJs: NodeJs,
     appNetlify: Netlify,
-    appOther: Other
+    appParticle: Particle
     //appAvatar: AppAvatar
   },
   data: () => ({
@@ -144,11 +144,11 @@ export default {
       },
       {
         uid: 60,
-        title: "Other Add-ons | The Funnest Stuff",
-        selectedComponent: "appOther",
-        largeLogo: OtherLogo,
-        miniLogo: OtherLogo,
-        logoLink: "https://www.powtoon.com/"
+        title: "Vue-Particles | The Interactive Particles Background",
+        selectedComponent: "appParticle",
+        largeLogo: ParticleLogo,
+        miniLogo: ParticleLogo,
+        logoLink: "http://vue-particles.netlify.com/"
       }
     ]
   }),

@@ -14,11 +14,7 @@
     Here is netlify's founder talking about what his team's thinking is offering to "the wild".
     </p>
 
-    <template>
-    <youtube video-id="uWTMEDEPw8c"></youtube>
-    </template>
-
-
+<youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
 
 
   </v-flex>
@@ -26,7 +22,7 @@
 </template>
 
 <script>
-// todo use this https://github.com/anteriovieira/vue-youtube instead of the existing lib
+// todo use this https://github.cnpm install vue-youtubeom/anteriovieira/vue-youtube instead of the existing lib
 // https://developers.google.com/youtube/iframe_api_reference#top_of_page
 import { Emoji } from "emoji-mart-vue";
 
@@ -34,10 +30,15 @@ export default {
   components: {
     emoji: Emoji
   },
-  data: () => ({}),
+  data: () => ({
+    videoId: "uWTMEDEPw8c"
+  }),
   props: {},
 
   computed: {
+    player() {
+      return this.$refs.youtube.player;
+    },
     dialogue: {
       // so far unused but non-breaking example of getters and setters
       get() {
@@ -46,6 +47,14 @@ export default {
       set(dialogue) {
         this.$store.state.dialogue = dialogue;
       }
+    }
+  },
+  methods: {
+    playVideo() {
+      this.player.playVideo();
+    },
+    playing() {
+      console.log("o/ we are watching!!!");
     }
   }
 };

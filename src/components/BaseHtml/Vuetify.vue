@@ -14,6 +14,8 @@ For example all the navigation, button, card, and slider components used in this
 <p>
 This sentence you're reading is inside a Material Design Expansion-Panel, brought to Vue by Vuetify.
 </p>
+<p>The Vuetify templates are a great place to start. This site was started off of the PWA template. </p>
+<br>
 <h4>What is Material Design?</h4>
 
 
