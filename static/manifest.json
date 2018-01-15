@@ -47,6 +47,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
-  // "splash_pages": null
+  ],
+  "splash_pages": null
 }
