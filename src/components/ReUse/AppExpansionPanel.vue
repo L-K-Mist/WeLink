@@ -36,7 +36,7 @@
                   <a :href="panel.logoLink" target="_blank">
                   <v-card-media
                   :src="panel.largeLogo"
-                  height="30%"
+                  height="80px"
                   contain
                   class="ma-0 pa-0 elevation-16"
                   ></v-card-media>
