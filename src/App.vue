@@ -7,8 +7,7 @@
         <v-content>
         <under-the-hood></under-the-hood>
         <tee-thanks></tee-thanks>
-          <router-view>
-          </router-view>
+          <router-view></router-view>
         </v-content>
     <!-- <v-footer app></v-footer> -->
   </v-app>
