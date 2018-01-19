@@ -51,7 +51,11 @@
                                         But thanks for the sanctuary and hospitality at such a critical time.
                                         </p><ul class="ml-3">
 
-                                        <li>Deeply in your debt Tee. (Literally <emoji  emoji="yum" :size="18"></emoji> )</li></ul>
+                                        <li>May you and The Ladies, move from strength to strength</li>
+                                        <li>May Matt find his way in the world</li>
+                                        <li>May Lucy find her own peace in the storm</li>
+                                        <li>And Bailey? You OK <emoji  emoji="wink" :size="18"></emoji> </li>
+                                        </ul>
 
                                           <br><br>
                                         <div style="width:60%;min-width:600px;padding-bottom:30%;position:relative;"><iframe src="https://giphy.com/embed/3orieYbU8jiXNf3q4E" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/season-12-the-simpsons-12x6-3orieYbU8jiXNf3q4E">via GIPHY</a></p>

@@ -1,200 +1,31 @@
 <template>
-  <v-app>
+  <div>
     <div>
       <v-layout row justify-center>
-        <v-btn color="primary" dark @click.stop="dialog = true">Open Dialog 1</v-btn>
-        <v-btn color="primary" dark @click.stop="dialog2 = true">Open Dialog 2</v-btn>
-        <v-btn color="primary" dark @click.stop="dialog3 = true">Open Dialog 3</v-btn>
-        <v-menu bottom offset-y>
-          <v-btn slot="activator">A Menu</v-btn>
-          <v-list>
-            <v-list-tile v-for="(item, i) in items" :key="i" @click="">
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
-      <v-dialog
-        v-model="dialogue"
-        max-width="80%"
-        transition="dialog-bottom-transition"
-        :overlay="false"
-        scrollable
-      >
-        <v-card>
-            <v-toolbar style="flex: 0 0 auto;" dark class="primary">
-            <v-btn icon @click.native="dialog = false" dark>
-              <v-icon>close</v-icon>
-            </v-btn>
-            <v-toolbar-title>Where is this component used?</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-              <v-btn dark flat @click.native="dialog = false">Save</v-btn>
-              <v-menu bottom right offset-y>
-                <v-btn slot="activator" dark icon>
-                  <v-icon>more_vert</v-icon>
-                </v-btn>
-                <v-list>
-                  <v-list-tile v-for="item in items" :key="item.title" @click="">
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                  </v-list-tile>
-                </v-list>
-              </v-menu>
-            </v-toolbar-items>
-          </v-toolbar>
+        <v-card elevation-1 style="position: absolute; top: 80px">
           <v-card-text>
-            <v-btn color="primary" dark @click.stop="dialog2 = !dialog2">Open Dialog 2</v-btn>
-            <v-tooltip right>
-            <v-btn slot="activator">Tool Tip Activator</v-btn>
-              Tool Tip
-            </v-tooltip>
-          <v-list three-line subheader>
-            <v-subheader>User Controls</v-subheader>
-            <v-list-tile avatar>
-              <v-list-tile-content>
-                <v-list-tile-title>Content filtering</v-list-tile-title>
-                <v-list-tile-sub-title>Set the content filtering level to restrict apps that can be downloaded</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile avatar>
-              <v-list-tile-content>
-                <v-list-tile-title>Password</v-list-tile-title>
-                <v-list-tile-sub-title>Require password for purchase or use password to restrict purchase</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-          <v-divider></v-divider>
-          <v-list three-line subheader>
-            <v-subheader>General</v-subheader>
-            <v-list-tile avatar>
-              <v-list-tile-action>
-                <v-checkbox v-model="notifications"></v-checkbox>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>Notifications</v-list-tile-title>
-                <v-list-tile-sub-title>Notify me about updates to apps or games that I downloaded</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile avatar>
-              <v-list-tile-action>
-                <v-checkbox v-model="sound"></v-checkbox>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>Sound</v-list-tile-title>
-                <v-list-tile-sub-title>Auto-update apps at any time. Data charges may apply</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile avatar>
-              <v-list-tile-action>
-                <v-checkbox v-model="widgets"></v-checkbox>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>Auto-add widgets</v-list-tile-title>
-                <v-list-tile-sub-title>Automatically add home screen widgets</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
           </v-card-text>
-
             <div style="flex: 1 1 auto;"></div>
         </v-card>
-      </v-dialog>
-        <v-dialog v-model="dialog2" max-width="500px">
-          <v-card>
-            <v-card-title>
-              Dialog 2
-            </v-card-title>
-            <v-card-text>
-              <v-btn color="primary" dark @click.stop="dialog3 = !dialog3">Open Dialog 3</v-btn>
-              <v-select
-                v-bind:items="select"
-                label="A Select List"
-                item-value="text"
-              ></v-select>
-            </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" flat @click.stop="dialog2=false">Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-        <v-dialog v-model="dialog3" max-width="500px">
-          <v-card>
-            <v-card-title>
-              <span>Dialog 3</span>
-              <v-spacer></v-spacer>
-              <v-menu bottom left>
-                <v-btn icon slot="activator">
-                  <v-icon>more_vert</v-icon>
-                </v-btn>
-                <v-list>
-                  <v-list-tile v-for="(item, i) in items" :key="i" @click="">
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                  </v-list-tile>
-                </v-list>
-              </v-menu>
-            </v-card-title>
-            <v-card-actions>
-              <v-btn color="primary" flat @click.stop="dialog3=false">Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
       </v-layout>
     </div>
-    <v-navigation-drawer
-      fixed
-      v-model="drawer"
-      app
-    >
-      <v-list dense>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon>home</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-        >
-          <v-tooltip right>
-            <v-btn icon large :href="source" target="_blank" slot="activator">
-              <v-icon large>code</v-icon>
-            </v-btn>
-            <span>Source</span>
-          </v-tooltip>
-        </v-layout>
       </v-container>
     </v-content>
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2017</span>
     </v-footer>
-  </v-app>
+  </div>
 
 </template>
 
 <script>
 export default {
   data: () => ({
-    dialog: false,
-    dialog2: false,
-    dialog3: false,
     notifications: false,
     sound: true,
     widgets: false,
