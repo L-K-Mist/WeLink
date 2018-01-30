@@ -158,6 +158,7 @@
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
 import welinkLogo from "@/assets/welink-logo-pwa.png";
+import { mapActions } from "vuex";
 
 export default {
   name: "app",
@@ -179,13 +180,16 @@ export default {
     showSharing: false,
 
     //drawer: null,
-    counter: 0,
+    //counter: 0,
     //info alert change the text value then make true
     alert: false,
     alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
   }),
   computed: {
+    counter: function() {
+      return this.$store.getters.clickCount;
+    },
     showFab: function() {
       return this.$store.state.seeLoveFab;
     }
@@ -211,6 +215,12 @@ export default {
     }, delay + displayFor);
   },
   methods: {
+    ...mapActions([
+      "incrementCounter" // map `this.increment()` to `this.$store.dispatch('increment')
+    ]),
+    // incrementCounter: function() {
+    //   return this.counter++;
+    // },
     openTeeDialogue: function() {
       this.$store.state.teeDialogue = true;
     },
@@ -233,9 +243,6 @@ export default {
     // logoOff: function() {
     //   return (this.showLogo = false);
     // },
-    incrementCounter: function() {
-      return this.counter++;
-    },
     sendAlertMessage: function() {
       this.alertMessage =
         "See the Primary Button above me? Click to learn more, when you're done exploring and creating";
