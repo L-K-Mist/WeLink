@@ -59,6 +59,7 @@
                   <img :src="welinkLogo" alt="Welink" style="position: absolute; left: 10px; width: 200px" transition="slide-x-transition"  >
                 </v-flex>
                 <v-flex xs4>
+                  <click-counter></click-counter>
                   <h1 style="color: white">{{ myName }}  {{ counter }}</h1>
                 </v-flex>
 
@@ -158,11 +159,13 @@
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
 import welinkLogo from "@/assets/welink-logo-pwa.png";
+import ClickCounter from "./Intro/ClickCounter";
 import { mapActions } from "vuex";
 
 export default {
   name: "app",
   components: {
+    ClickCounter
     //Foot,
     //MainContent
   },
