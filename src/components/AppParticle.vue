@@ -195,6 +195,9 @@ export default {
     },
     showFab: function() {
       return this.$store.state.seeLoveFab;
+    },
+    showTee: function() {
+      return this.$store.getters.teeDialogueState;
     }
   },
   props: {
@@ -219,14 +222,15 @@ export default {
   },
   methods: {
     ...mapActions([
-      "incrementCounter" // map `this.increment()` to `this.$store.dispatch('increment')
+      "incrementCounter", // map `this.increment()` to `this.$store.dispatch('increment')
+      "openTeeDialogue"
     ]),
     // incrementCounter: function() {
     //   return this.counter++;
     // },
-    openTeeDialogue: function() {
-      this.$store.state.teeDialogue = true;
-    },
+    // openTeeDialogue: function() {
+    //   this.$store.state.teeDialogue = true;
+    // },
     openIntroDialogue: function() {
       this.$store.state.dialogue = true;
     },
@@ -252,6 +256,8 @@ export default {
       this.alert = true;
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
+
+    //TODO: Pull this out to counter vuex module
     clickSwitchCase: function() {
       switch (this.counter) {
         case 0:
@@ -309,12 +315,12 @@ export default {
           console.log("switchCase error! fell through to default");
       }
     }
-  },
-
-  beforeDestroy() {
-    //clearInterval(this.onTimer);
-    this.counter = 0;
   }
+
+  // beforeDestroy() {
+  //   //clearInterval(this.onTimer);
+  //   this.counter = 0;
+  // }
 };
 </script>
 

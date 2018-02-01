@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import counter from './modules/counter';
+import thankTee from './modules/thankTee';
 
 Vue.use(Vuex);
 
@@ -14,7 +15,8 @@ export const store = new Vuex.Store({
     getDialogueBool: state => state.dialogue,
   },
   modules: {
-    counter
+    counter,
+    thankTee
   }
 
 });

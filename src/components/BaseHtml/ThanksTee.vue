@@ -104,10 +104,10 @@ export default {
   computed: {
     dialogue: {
       get() {
-        return this.$store.state.teeDialogue;
+        return this.$store.getters.teeDialogueState;
       },
       set(dialogue) {
-        this.$store.state.teeDialogue = dialogue;
+        this.$store.dispatch("toggleTeeDialogue");
       }
     }
   }
