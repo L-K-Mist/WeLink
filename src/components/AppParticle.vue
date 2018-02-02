@@ -194,7 +194,7 @@ export default {
       return this.$store.getters.clickCount;
     },
     showFab: function() {
-      return this.$store.state.seeLoveFab;
+      return this.$store.getters.seeLoveFab;
     },
     showTee: function() {
       return this.$store.getters.teeDialogueState;
@@ -257,16 +257,9 @@ export default {
     },
     //NTS Dylan you must slide alerts from right to left, because we read from left to right
 
-    //TODO: Pull this out to counter vuex module
+    //TODO: After all others. Pull this out to counter vuex module
     clickSwitchCase: function() {
       switch (this.counter) {
-        case 0:
-          break;
-        case 1:
-          break;
-        case 2:
-          //this.showLogo = false;
-          break;
         case 3:
           this.showComingSoon = true;
           break;
@@ -277,21 +270,12 @@ export default {
         case 5:
           this.showWatch = true;
           break;
-        case 7:
-          break;
         case 8:
           this.showSharing = true;
           //this.showWatch = true;
           break;
         case 9:
           this.showLogo = true;
-          break;
-        case 10:
-          break;
-        case 11:
-          break;
-        case 12:
-          // this.showComingSoon = false;
           break;
         case 13:
           this.showWatch = false;
@@ -304,15 +288,13 @@ export default {
           this.sendAlertMessage();
           break;
         case 17:
-          this.$store.state.seeLoveFab = true;
+          this.$store.dispatch("revealLoveFab");
+          //this.$store.state.seeLoveFab = true; <-- old way
           console.log("seeLoveFab updated from count");
           console.log(this.$store.state.seeLoveFab);
           //this.resetCounter();
           //this.counter = 0;
           break;
-
-        default:
-          console.log("switchCase error! fell through to default");
       }
     }
   }

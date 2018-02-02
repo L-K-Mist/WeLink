@@ -7,12 +7,12 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    dialogue: false,
-    teeDialogue: false,
-    seeLoveFab: false,
+    //dialogue: false,
+    //teeDialogue: false,
+
   },
   getters: {
-    getDialogueBool: state => state.dialogue,
+    //getDialogueBool: state => state.dialogue,
   },
   modules: {
     counter,
