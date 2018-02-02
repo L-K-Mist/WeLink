@@ -60,9 +60,8 @@
                 </v-flex>
                 <v-flex xs4>
                   <click-counter></click-counter>
-                  <h1 style="color: white">{{ myName }}  {{ counter }}</h1>
+                  <h1 style="color: white">{{ counter }}</h1>
                 </v-flex>
-
                 <v-flex xs4>
                   <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openIntroDialogue">See what this App is Built out of</v-btn>
                 </v-flex>
@@ -178,7 +177,7 @@ export default {
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
     showLogo: false,
-    showComingSoon: false,
+    //showComingSoon: false,
     showWatch: false,
     showSharing: false,
 
@@ -198,6 +197,14 @@ export default {
     },
     showTee: function() {
       return this.$store.getters.teeDialogueState;
+    },
+    showComingSoon: {
+      get() {
+        return this.$store.getters.seeComingSoon;
+      },
+      set(newBool) {
+        return this.$store.dispatch("seeComingSoon", newBool);
+      }
     }
   },
   props: {

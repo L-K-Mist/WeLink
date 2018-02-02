@@ -27,6 +27,7 @@ const mutations = {
   toggleLoveFab: state => { // Dee might not use
     state.seeLoveFab = !state.seeLoveFab;
   },
+
 };
 
 const actions = {

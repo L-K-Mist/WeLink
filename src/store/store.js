@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import counter from './modules/counter';
 import thankTee from './modules/thankTee';
+import comingSoon from './modules/comingSoon';
 
 Vue.use(Vuex);
 
@@ -16,7 +17,8 @@ export const store = new Vuex.Store({
   },
   modules: {
     counter,
-    thankTee
+    thankTee,
+    comingSoon
   }
 
 });
