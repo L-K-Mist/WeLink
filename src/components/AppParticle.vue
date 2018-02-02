@@ -89,8 +89,8 @@
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
-              <div v-if="showWatch">
-                <h2 @click="showWatch = false" class="text-xs-center" style="cursor: pointer" >
+              <div v-if="showWatchSpace">
+                <h2 @click="showWatchSpace = false" class="text-xs-center" style="cursor: pointer" >
                   Watch This Space!
                 </h2>
               </div>
@@ -98,8 +98,8 @@
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
-              <div  v-if="showSharing">
-                <h3 @click="showSharing = false" style="cursor: pointer" >
+              <div  v-if="showSharingHow">
+                <h3 @click="showSharingHow = false" style="cursor: pointer" >
                   <i>We'll be sharing how we did it as we do it.</i>
                 </h3>
               </div>
@@ -107,8 +107,8 @@
             <transition appear
                     enter-active-class="animated zoomInUp"
                     leave-active-class="animated bounceOutRight">
-              <div name="last-word" v-if="showSharing">
-                <h3 @click="showSharing = false" style="cursor: pointer" >
+              <div name="last-word" v-if="showSharingHow">
+                <h3 @click="showSharingHow = false" style="cursor: pointer" >
                   <i>So enjoy the clicks, I'll be back soon</i>
                 </h3>
               </div>
@@ -133,10 +133,10 @@
               v-model="showComingSoon">
             </v-switch>
             <v-switch light
-              v-model="showWatch">
+              v-model="showWatchSpace">
             </v-switch>
             <v-switch light
-              v-model="showSharing">
+              v-model="showSharingHow">
             </v-switch>
             <v-switch light @click="resetCounter" value="true" ></v-switch>
           </v-layout>
@@ -178,8 +178,8 @@ export default {
     welinkLogo: welinkLogo,
     showLogo: false,
     //showComingSoon: false,
-    showWatch: false,
-    showSharing: false,
+    //showWatchSpace: false,
+    //showSharingHow: false,
 
     //drawer: null,
     //counter: 0,
@@ -203,7 +203,23 @@ export default {
         return this.$store.getters.seeComingSoon;
       },
       set(newBool) {
-        return this.$store.dispatch("seeComingSoon", newBool);
+        return this.$store.dispatch("setComingSoon", newBool);
+      }
+    },
+    showWatchSpace: {
+      get() {
+        return this.$store.getters.seeWatchSpace;
+      },
+      set(newBool) {
+        return this.$store.dispatch("setWatchSpace", newBool);
+      }
+    },
+    showSharingHow: {
+      get() {
+        return this.$store.getters.seeSharingHow;
+      },
+      set(newBool) {
+        return this.$store.dispatch("setSharingHow", newBool);
       }
     }
   },
@@ -275,18 +291,18 @@ export default {
           this.notify;
           break;
         case 5:
-          this.showWatch = true;
+          this.showWatchSpace = true;
           break;
         case 8:
-          this.showSharing = true;
-          //this.showWatch = true;
+          this.showSharingHow = true;
+          //this.showWatchSpace = true;
           break;
         case 9:
           this.showLogo = true;
           break;
         case 13:
-          this.showWatch = false;
-          this.showSharing = false;
+          this.showWatchSpace = false;
+          this.showSharingHow = false;
           break;
         case 14:
           //this.sendAlertMessage();

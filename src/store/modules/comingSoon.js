@@ -18,28 +18,35 @@ const getters = {
 
 const mutations = {
   // For opening the dialogue with thanksTee content
-  seeComingSoon: (state, payload) => {
+  setComingSoon: (state, payload) => {
     state.seeComingSoon = payload;
   },
-  // seeWatchSpace: state => {
-  //     state.teeDialogue = !state.teeDialogue;
-  // },
-  // // For revealing the BUTTON that activates the thanksTee dialogue
-  // revealLoveFab: state => {
-  //     state.seeLoveFab = true;
-  // },
-  // toggleLoveFab: state => { // Dee might not use
-  //     state.seeLoveFab = !state.seeLoveFab;
-  // },
+  setWatchSpace: (state, payload) => {
+    state.seeWatchSpace = payload;
+  },
+  setSharingHow: (state, payload) => {
+    state.seeSharingHow = payload;
+  },
+
 
 };
 
 const actions = {
   // Dialogue actions
-  seeComingSoon: ({
+  setComingSoon: ({
     commit
   }, payload) => {
-    commit('seeComingSoon', payload);
+    commit('setComingSoon', payload);
+  },
+  setWatchSpace: ({
+    commit
+  }, payload) => {
+    commit('setWatchSpace', payload);
+  },
+  setSharingHow: ({
+    commit
+  }, payload) => {
+    commit('setSharingHow', payload);
   },
 
 };
