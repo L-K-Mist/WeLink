@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-
-
     <!-- there was some creative power of chance in this one -->
     <v-app>
- <transition appear
+      <transition appear
                     enter-active-class="animated bounceInDown"
                     leave-active-class="animated wobble">
             <v-btn class="elevation-5" style="position: absolute; bottom: 60px; right: 60px"
@@ -20,9 +18,7 @@
             >
               <v-icon x-large>favorite_border</v-icon>
             </v-btn>
-
-</transition>
-
+      </transition>
       <!-- <div style="display: inline-block; position: relative; top: 90%; z-height: 2"> -->
       <!-- </div> -->
       <!--<img src="./assets/logo.png">-->
@@ -59,11 +55,10 @@
                   <img :src="welinkLogo" alt="Welink" style="position: absolute; left: 10px; width: 200px" transition="slide-x-transition"  >
                 </v-flex>
                 <v-flex xs4>
-                  <click-counter></click-counter>
-                  <h1 style="color: white">{{ counter }}</h1>
+                  <click-counter></click-counter>                  
                 </v-flex>
                 <v-flex xs4>
-                  <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openIntroDialogue">See what this App is Built out of</v-btn>
+                  <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openThanksTee">See what this App is Built out of</v-btn>
                 </v-flex>
               </v-layout>
             </v-toolbar>
@@ -126,21 +121,7 @@
             </v-alert>
           </v-flex>
         <!-- SWITCHES -->
-        <div v-if="counter > 10" style="position: absolute; left: 1%; z-index: 8"
-        transition="slide-x-transition">
-          <v-layout column>
-            <v-switch light
-              v-model="showComingSoon">
-            </v-switch>
-            <v-switch light
-              v-model="showWatchSpace">
-            </v-switch>
-            <v-switch light
-              v-model="showSharingHow">
-            </v-switch>
-            <v-switch light @click="resetCounter" value="true" ></v-switch>
-          </v-layout>
-        </div>
+      <word-play></word-play>
       </div>
       <!-- <div  style="position: absolute; top: 110%; height: 100%"> -->
         <!-- <v-container style="position: absolute; top: 150%"> -->
@@ -160,11 +141,13 @@ import stars from "@/assets/starrysky.jpg";
 import welinkLogo from "@/assets/welink-logo-pwa.png";
 import ClickCounter from "./Intro/ClickCounter";
 import { mapActions } from "vuex";
+import WordPlay from "./Intro/WordPlay";
 
 export default {
   name: "app",
   components: {
-    ClickCounter
+    ClickCounter,
+    WordPlay
     //Foot,
     //MainContent
   },
@@ -190,14 +173,14 @@ export default {
     onTimer: ""
   }),
   computed: {
+    showTee: function() {
+      return this.$store.getters.teeDialogueState;
+    },
     counter: function() {
       return this.$store.getters.clickCount;
     },
     showFab: function() {
       return this.$store.getters.seeLoveFab;
-    },
-    showTee: function() {
-      return this.$store.getters.teeDialogueState;
     },
     showComingSoon: {
       get() {
@@ -263,14 +246,14 @@ export default {
     // openTeeDialogue: function() {
     //   this.$store.state.teeDialogue = true;
     // },
-    openIntroDialogue: function() {
-      this.$store.state.dialogue = true;
+    openThanksTee: function() {
+      this.$store.dispatch("openTeeDialogue");
     },
     resetName: function() {
       console.log("nameWasReset Emitted from AppParticle");
     },
     resetCounter: function() {
-      return (this.counter = 0);
+      return (this.$store.state.counter = 0);
     },
     notify: function() {
       this.$dispatch("grabThisEvent", "I'm a message!");
