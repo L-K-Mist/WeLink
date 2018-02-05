@@ -8,12 +8,26 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    //dialogue: false,
-    //teeDialogue: false,
-
+    seeLogo: false,
   },
   getters: {
+    seeLogoState: state => {
+      return state.seeLogo;
+    }
     //getDialogueBool: state => state.dialogue,
+  },
+  mutations: {
+    setLogo: (state, payload) => {
+      state.seeLogo = payload;
+    }
+  },
+  actions: {
+    setLogo: ({
+      commit
+    }, payload) => {
+      commit('setLogo', payload);
+    }
+
   },
   modules: {
     counter,

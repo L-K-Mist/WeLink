@@ -176,7 +176,8 @@ export default {
   data: () => ({
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
-    showLogo: false,
+    //These data items below have been moved to Vuex store
+    //showLogo: false,
     //showComingSoon: false,
     //showWatchSpace: false,
     //showSharingHow: false,
@@ -220,6 +221,14 @@ export default {
       },
       set(newBool) {
         return this.$store.dispatch("setSharingHow", newBool);
+      }
+    },
+    showLogo: {
+      get() {
+        return this.$store.getters.seeLogoState;
+      },
+      set(newBool) {
+        return this.$store.dispatch("setLogo", newBool);
       }
     }
   },
