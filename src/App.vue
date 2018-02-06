@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import AppParticle from "./components/AppParticle";
+import AppParticle from "./components/Intro/AppParticle";
 import UnderTheHood from "./components/UnderTheHood";
 import TeeThanks from "@/components/BaseHtml/ThanksTee";
 import VueFrame from "vue-frame";

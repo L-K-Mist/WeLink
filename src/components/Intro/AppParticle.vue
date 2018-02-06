@@ -74,7 +74,7 @@
             </v-toolbar>
           </v-layout>
           <v-flex >
-            <v-alert style="position: absolute; top: 70px; right: 10px"
+            <v-alert style="position: relative; top: 70px; right: 10px"
                     color="success"
                     icon="info_circle"
                     transition="slide-x-reverse-transition"
@@ -97,9 +97,9 @@
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
 import welinkLogo from "@/assets/welink-logo-pwa.png";
-import ClickCounter from "./Intro/ClickCounter";
+import ClickCounter from "@/components/Intro/ClickCounter";
 import { mapActions } from "vuex";
-import WordPlay from "./Intro/WordPlay";
+import WordPlay from "@/components/Intro/WordPlay";
 
 export default {
   name: "app",

@@ -25,7 +25,7 @@
       <transition appear
             enter-active-class="animated zoomInDown"
             leave-active-class="animated bounceOutRight" v-if="showComingSoon">
-        <div class="impact-text" style="top: -10px">
+        <div class="impact-text" style="top: -90px">
           <h1 @click="showComingSoon = false" style="cursor: pointer" >
             WeLink 2.0 Coming Soon...
           </h1>
@@ -34,7 +34,7 @@
       <transition appear
                 enter-active-class="animated zoomInUp"
                 leave-active-class="animated bounceOutRight">
-        <div class="impact-text" style="top: 15vw"
+        <div class="impact-text" style="top: 10vw"
               v-if="showWatchSpace">
           <h2 @click="showWatchSpace = false" class="text-xs-center" style="cursor: pointer" >
             Watch This Space!
@@ -44,7 +44,7 @@
       <transition appear
               enter-active-class="animated zoomInUp"
               leave-active-class="animated bounceOutRight">
-        <div class="impact-text" style="top: 50vw" v-if="showSharingHow">
+        <div class="impact-text" style="top: 20vw" v-if="showSharingHow">
           <h3 @click="showSharingHow = false" style="cursor: pointer" >
             <i>We'll be sharing how we did it as we do it.</i>
           </h3>
@@ -53,7 +53,7 @@
       <transition appear
               enter-active-class="animated zoomInUp"
               leave-active-class="animated bounceOutRight">
-        <div class="impact-text" style="top: 60vw" v-if="showSharingHow">
+        <div class="impact-text" style="top: 30vw" v-if="showSharingHow">
           <p @click="showSharingHow = false" style="cursor: pointer" >
             <i>So enjoy the clicks, I'll be back soon</i>
           </p>
@@ -118,7 +118,7 @@ body {
   position: absolute;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  font: 5vw Teko, sans-serif;
+  font: 4.5vw Teko, sans-serif;
 
   left: 0;
   right: 0;
