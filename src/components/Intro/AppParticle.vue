@@ -67,8 +67,9 @@
                 <v-flex xs4>
                   <click-counter></click-counter>                  
                 </v-flex>
-                <v-flex xs4>
-                  <v-btn color="primary" style="position: absolute; right: 10px" primary  @click.native.stop="openThanksTee">See what this App is Built out of</v-btn>
+                
+                <v-flex xs3>
+                  <v-btn color="primary"  @click.native.stop="openThanksTee">See How it's Made</v-btn>
                 </v-flex>
               </v-layout>
             </v-toolbar>
@@ -209,45 +210,21 @@ export default {
     openThanksTee: function() {
       this.$store.dispatch("openTeeDialogue");
     },
-    resetName: function() {
-      console.log("nameWasReset Emitted from AppParticle");
-    },
-    resetCounter: function() {
-      return (this.$store.state.counter = 0);
-    },
-    notify: function() {
-      this.$dispatch("grabThisEvent", "I'm a message!");
-    },
-    // logoOn: function() {
-    //   setTimeout(this.logoOff, 3000);
-    //   return (this.showLogo = true);
-    // },
-    // logoOff: function() {
-    //   return (this.showLogo = false);
-    // },
     sendAlertMessage: function() {
       this.alertMessage =
         "See the Primary Button above me? Click to learn more, when you're done exploring and creating";
       this.alert = true;
     },
-    //NTS Dylan you must slide alerts from right to left, because we read from left to right
-
-    //TODO: After all others. Pull this out to counter vuex module
     clickSwitchCase: function() {
       switch (this.counter) {
         case 3:
           this.showComingSoon = true;
-          break;
-        case 4:
-          //DEBUGGING ONLY
-          this.notify;
           break;
         case 5:
           this.showWatchSpace = true;
           break;
         case 8:
           this.showSharingHow = true;
-          //this.showWatchSpace = true;
           break;
         case 9:
           this.showLogo = true;
@@ -256,28 +233,22 @@ export default {
           this.showWatchSpace = false;
           this.showSharingHow = false;
           break;
-        case 14:
-          //this.sendAlertMessage();
-          break;
         case 15:
           this.sendAlertMessage();
           break;
         case 17:
           this.$store.dispatch("revealLoveFab");
-          //this.$store.state.seeLoveFab = true; <-- old way
-          console.log("seeLoveFab updated from count");
-          console.log(this.$store.state.seeLoveFab);
-          //this.resetCounter();
-          //this.counter = 0;
           break;
+        case 18:
+          this.showComingSoon = false;
       }
     }
-  }
+  },
 
-  // beforeDestroy() {
-  //   //clearInterval(this.onTimer);
-  //   this.counter = 0;
-  // }
+  beforeDestroy() {
+    //clearInterval(this.onTimer);
+    this.counter = 0;
+  }
 };
 </script>
 
