@@ -1,14 +1,13 @@
 <template>
   <v-app id="app">
-    <app-particle
-    :myName="name"></app-particle>
+    <app-particle></app-particle>
         <!-- <v-navigation-drawer app></v-navigation-drawer> -->
         <!-- <v-toolbar app></v-toolbar> -->
-        <v-content>
-        <under-the-hood></under-the-hood>
-        <tee-thanks></tee-thanks>
-          <router-view></router-view>
-        </v-content>
+    <v-content>
+    <router-view></router-view>
+    <under-the-hood></under-the-hood>
+    <tee-thanks></tee-thanks>
+    </v-content>
     <!-- <v-footer app></v-footer> -->
   </v-app>
 </template>
