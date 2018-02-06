@@ -54,7 +54,7 @@
           <!-- START OF LOGO -->
           <!-- ====================================================================== -->
           <v-layout column>
-            <v-toolbar fluid class="transparent ml-0" name="dashboard-toolbar"  v-if="showLogo"  style="position: absolute;
+            <v-toolbar fluid class="transparent ml-0" name="dashboard-toolbar"  v-if="counter >= 9"  style="position: absolute;
                                                   width: 100%;
                                                   height: 70px;
                                                   left: 10px;
@@ -107,26 +107,10 @@ export default {
   components: {
     ClickCounter,
     WordPlay
-    //Foot,
-    //MainContent
   },
-  // events: {
-  //   grabThisEvent: function(msg) {
-  //     alert(msg);
-  //   }
-  // },
   data: () => ({
     msg: "Welcome to Your Vue.js App",
     welinkLogo: welinkLogo,
-    //These data items below have been moved to Vuex store
-    //showLogo: false,
-    //showComingSoon: false,
-    //showWatchSpace: false,
-    //showSharingHow: false,
-
-    //drawer: null,
-    //counter: 0,
-    //info alert change the text value then make true
     alert: false,
     alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
@@ -135,12 +119,9 @@ export default {
     showTee: function() {
       return this.$store.getters.teeDialogueState;
     },
-
     showFab: function() {
       return this.$store.getters.seeLoveFab;
     },
-
-    // Pull these out into counter note: copies are already pulled out into WordPlay.vue
     counter: {
       get() {
         return this.$store.getters.clickCount;
@@ -224,20 +205,17 @@ export default {
     clickSwitchCase: function() {
       switch (this.counter) {
         case 3:
-          this.showComingSoon = true;
+          this.$store.dispatch("setComingSoon", true);
           break;
         case 5:
-          this.showWatchSpace = true;
+          this.$store.dispatch("setWatchSpace", true);
           break;
         case 8:
-          this.showSharingHow = true;
-          break;
-        case 9:
-          this.showLogo = true;
+          this.$store.dispatch("setSharingHow", true);
           break;
         case 13:
-          this.showWatchSpace = false;
-          this.showSharingHow = false;
+          this.$store.dispatch("setWatchSpace", false);
+          this.$store.dispatch("setSharingHow", false);
           break;
         case 15:
           this.sendAlertMessage();
@@ -246,7 +224,7 @@ export default {
           this.$store.dispatch("revealLoveFab");
           break;
         case 18:
-          this.showComingSoon = false;
+          this.$store.dispatch("setComingSoon", false);
       }
     }
   },
