@@ -1,9 +1,9 @@
 <template>
   <v-app id="app">
-    <app-particle></app-particle>
         <!-- <v-navigation-drawer app></v-navigation-drawer> -->
         <!-- <v-toolbar app></v-toolbar> -->
     <v-content>
+    <app-particle></app-particle>
     <router-view></router-view>
     <under-the-hood></under-the-hood>
     <tee-thanks></tee-thanks>

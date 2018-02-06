@@ -23,7 +23,7 @@
       <!-- </div> -->
       <!--<img src="./assets/logo.png">-->
       <!-- <div v-on:click="firstFunction(); secondFunction();"></div> -->
-      <div name="hero-bkg" class="wrap-banner" @click="incrementCounter(); clickSwitchCase()">
+      <div name="hero-bkg" class="wrap-banner text-xs-center" @click="incrementCounter(); clickSwitchCase()">
         <vue-particles
           color="#ffffff"
           :particleOpacity="0.7"
@@ -41,13 +41,15 @@
           :clickEffect="true"
           clickMode="push">
         </vue-particles>
-        <v-container fluid fill-height>
-          <v-layout flex align-center justify-center>
-            <v-flex >
-              <word-play></word-play>
-            </v-flex>
-          </v-layout>          
-        </v-container>
+        <v-content>
+          <v-container fluid fill-height>
+            <v-layout align-center justify-center>
+              <v-flex xs-12 class="text-xs-center">
+                <word-play></word-play>
+              </v-flex>
+            </v-layout>          
+          </v-container>
+        </v-content>
         
           <!-- START OF LOGO -->
           <!-- ====================================================================== -->
@@ -278,5 +280,19 @@ export default {
   // }
 };
 </script>
+
+<style>
+.wrap-banner {
+  position: relative;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+</style>
+
 
 
