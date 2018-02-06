@@ -135,14 +135,20 @@ export default {
     showTee: function() {
       return this.$store.getters.teeDialogueState;
     },
-    counter: function() {
-      return this.$store.getters.clickCount;
-    },
+
     showFab: function() {
       return this.$store.getters.seeLoveFab;
     },
 
     // Pull these out into counter note: copies are already pulled out into WordPlay.vue
+    counter: {
+      get() {
+        return this.$store.getters.clickCount;
+      },
+      set(value) {
+        return this.$store.dispatch("setCounter", value);
+      }
+    },
     showComingSoon: {
       get() {
         return this.$store.getters.seeComingSoon;

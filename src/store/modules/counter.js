@@ -10,16 +10,24 @@ const getters = {
 
 const mutations = {
   incrementCounter: state => {
-    state.counter ++;
-  }
+    state.counter++;
+  },
+  setCounter: (state, payload) => {
+    state.counter = payload;
+  },
 };
 
 const actions = {
   incrementCounter: ({
     commit
   }) => {
-      commit('incrementCounter');
-  }
+    commit('incrementCounter');
+  },
+  setCounter: ({
+    commit
+  }, payload) => {
+    commit('setCounter', payload);
+  },
 };
 
 export default {
