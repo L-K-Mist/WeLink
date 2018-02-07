@@ -3,10 +3,10 @@
     <v-container style="position: relative">
 
       <v-layout row justify-center>
-        <v-flex xs10>
+        <v-flex xs12 sm10>
           <v-dialog  v-model="dialogue"
             :fullscreen="$vuetify.breakpoint.xsOnly"
-            max-width="80%"
+            max-width="95%"
             transition="dialog-bottom-transition"
             overlay="true"
             scrollable
@@ -72,10 +72,10 @@ export default {
   computed: {
     dialogue: {
       get() {
-        return this.$store.state.dialogue;
+        return this.$store.getters.howDialogueState;
       },
       set(dialogue) {
-        this.$store.state.dialogue = dialogue;
+        this.$store.state.howDialogue = dialogue; //not best way, should use action here
       }
     }
   },

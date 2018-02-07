@@ -38,15 +38,6 @@ export default {
   computed: {
     player() {
       return this.$refs.youtube.player;
-    },
-    dialogue: {
-      // so far unused but non-breaking example of getters and setters
-      get() {
-        return this.$store.state.dialogue;
-      },
-      set(dialogue) {
-        this.$store.state.dialogue = dialogue;
-      }
     }
   },
   methods: {

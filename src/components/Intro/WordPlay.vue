@@ -25,7 +25,7 @@
       <transition appear
             enter-active-class="animated zoomInDown"
             leave-active-class="animated bounceOutRight" v-if="showComingSoon">
-        <div class="impact-text" style="top: -90px">
+        <div class="impact-text" style="top: 0px">
           <h1 @click="showComingSoon = false" style="cursor: pointer" >
             WeLink 2.0 Coming Soon...
           </h1>

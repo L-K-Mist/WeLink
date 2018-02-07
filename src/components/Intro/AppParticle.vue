@@ -68,8 +68,8 @@
                   <click-counter></click-counter>                  
                 </v-flex>
                 
-                <v-flex xs3>
-                  <v-btn color="primary"  @click.native.stop="openThanksTee">See How it's Made</v-btn>
+                <v-flex>
+                  <v-btn color="primary" style="position: absolute; right: 30px" @click.native.stop="openHowMade">See How it's Made</v-btn>
                 </v-flex>
               </v-layout>
             </v-toolbar>
@@ -81,8 +81,9 @@
                     transition="slide-x-reverse-transition"
                     dismissible
                     v-model="alert"
-                    class="elevation-20">
-              {{ alertMessage }}
+                    class="text-xs-left elevation-20">
+                    <strong>{{ alertMessage }}</strong>
+              
             </v-alert>
           </v-flex>
       </div>
@@ -91,7 +92,7 @@
 </template>
 
 <script>
-//TODO SOON
+//TODO SOON Fix how it's made button to show How it's made NOT thanks Tee
 // NEXT events
 // THEN make screen slide dynamically to get top of particle to become the banner
 //import Foot from "./components/Foot";
@@ -196,6 +197,9 @@ export default {
     // },
     openThanksTee: function() {
       this.$store.dispatch("openTeeDialogue");
+    },
+    openHowMade: function() {
+      this.$store.dispatch("openHowDialogue");
     },
     sendAlertMessage: function() {
       this.alertMessage =

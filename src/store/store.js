@@ -2,7 +2,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import counter from './modules/counter';
 import thankTee from './modules/thankTee';
+import underTheHood from './modules/underTheHood'
 import comingSoon from './modules/comingSoon';
+import infoAlert from './modules/infoAlert'
 
 Vue.use(Vuex);
 
@@ -32,7 +34,9 @@ export const store = new Vuex.Store({
   modules: {
     counter,
     thankTee,
-    comingSoon
+    comingSoon,
+    infoAlert,
+    underTheHood
   }
 
 });

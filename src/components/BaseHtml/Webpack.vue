@@ -42,7 +42,7 @@
           </strong>
           </p>
           <p>
-          In more advance apps, this static rendering you're seeing here (animations and all) would represent the app-shell. These visuals, plus a server api, and some real-time sockets, and you've got a full-blown real-time app like whatsapp or facebook!
+          In more advanced apps, this static rendering you're seeing here (animations and all) would represent the app-shell. These visuals, plus a server api, and some real-time sockets, and you've got a full-blown real-time app like whatsapp or facebook!
           </p>
           <p>
           That's what's coming soon here! :)

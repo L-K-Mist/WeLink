@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-layout row justify-center>
-      <v-flex xs10>
+      <v-flex xs12 sm10>
         <v-dialog v-model="dialogue"
 
-          max-width="80%"
+          max-width="95%"
           transition="dialog-bottom-transition"
           overlay="true"
           scrollable
