@@ -86,6 +86,8 @@
               
             </v-alert>
           </v-flex>
+          <under-the-hood></under-the-hood>
+          <tee-thanks></tee-thanks>
       </div>
     </v-app>
   </div>
@@ -102,12 +104,16 @@ import welinkLogo from "@/assets/welink-logo-pwa.png";
 import ClickCounter from "@/components/Intro/ClickCounter";
 import { mapActions } from "vuex";
 import WordPlay from "@/components/Intro/WordPlay";
+import UnderTheHood from "@/components/UnderTheHood";
+import TeeThanks from "@/components/BaseHtml/ThanksTee";
 
 export default {
   name: "app",
   components: {
     ClickCounter,
-    WordPlay
+    WordPlay,
+    UnderTheHood,
+    TeeThanks
   },
   data: () => ({
     msg: "Welcome to Your Vue.js App",

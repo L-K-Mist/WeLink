@@ -5,8 +5,7 @@
     <v-content>
     <intro-sequence></intro-sequence>
     <router-view></router-view>
-    <under-the-hood></under-the-hood>
-    <tee-thanks></tee-thanks>
+
     </v-content>
     <!-- <v-footer app></v-footer> -->
   </v-app>
@@ -14,8 +13,7 @@
 
 <script>
 import IntroSequence from "./components/Intro/IntroSequence";
-import UnderTheHood from "./components/UnderTheHood";
-import TeeThanks from "@/components/BaseHtml/ThanksTee";
+
 import VueFrame from "vue-frame";
 
 import { Emoji } from "emoji-mart-vue";
@@ -23,9 +21,7 @@ import { Emoji } from "emoji-mart-vue";
 export default {
   components: {
     VueFrame,
-    TeeThanks,
     IntroSequence,
-    UnderTheHood,
     emoji: Emoji
   },
   data: () => ({
