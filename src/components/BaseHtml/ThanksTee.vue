@@ -1,5 +1,4 @@
 <template>
- 
     <v-layout row justify-center>
       <v-flex xs12 sm10>
         <v-dialog v-model="dialogue"
