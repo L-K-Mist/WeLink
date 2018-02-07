@@ -1,6 +1,6 @@
 <template>
 
-    <v-container style="position: relative">
+   
 
       <v-layout row justify-center>
         <v-flex xs12 sm10>
@@ -8,7 +8,7 @@
             :fullscreen="$vuetify.breakpoint.xsOnly"
             max-width="95%"
             transition="dialog-bottom-transition"
-            overlay="true"
+            hide-overlay
             scrollable
             style="opacity: 0.5"
             >
@@ -48,7 +48,7 @@
         </v-flex>
       </v-layout>
 
-    </v-container>
+   
 
 </template>
 

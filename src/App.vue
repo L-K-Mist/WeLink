@@ -3,7 +3,7 @@
         <!-- <v-navigation-drawer app></v-navigation-drawer> -->
         <!-- <v-toolbar app></v-toolbar> -->
     <v-content>
-    <app-particle></app-particle>
+    <intro-sequence></intro-sequence>
     <router-view></router-view>
     <under-the-hood></under-the-hood>
     <tee-thanks></tee-thanks>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import AppParticle from "./components/Intro/AppParticle";
+import IntroSequence from "./components/Intro/IntroSequence";
 import UnderTheHood from "./components/UnderTheHood";
 import TeeThanks from "@/components/BaseHtml/ThanksTee";
 import VueFrame from "vue-frame";
@@ -24,7 +24,7 @@ export default {
   components: {
     VueFrame,
     TeeThanks,
-    AppParticle,
+    IntroSequence,
     UnderTheHood,
     emoji: Emoji
   },

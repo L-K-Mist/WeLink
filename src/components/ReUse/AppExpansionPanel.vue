@@ -5,6 +5,7 @@
         <v-expansion-panel-content
             v-for="panel in panels"
             v-bind:key="panel.uid"
+            ripple
             >
           <div slot="header" class="elevation-5 ma-1">
             <v-container grid-list-sm>
