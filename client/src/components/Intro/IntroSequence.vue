@@ -53,7 +53,7 @@
         
           <!-- START OF LOGO -->
           <!-- ====================================================================== -->
-          <v-layout column>
+          <!-- <v-layout column>
             <v-toolbar fluid class="transparent ml-0" name="dashboard-toolbar"  v-if="counter >= 9"  style="position: absolute;
                                                   width: 100%;
                                                   height: 70px;
@@ -73,7 +73,7 @@
                 </v-flex>
               </v-layout>
             </v-toolbar>
-          </v-layout>
+          </v-layout> -->
           <v-flex >
             <v-alert style="position: relative; top: 70px; right: 10px"
                     color="success"
@@ -100,8 +100,6 @@
 //import Foot from "./components/Foot";
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
-import welinkLogo from "@/assets/welink-logo-pwa.png";
-import ClickCounter from "@/components/Intro/ClickCounter";
 import { mapActions } from "vuex";
 import WordPlay from "@/components/Intro/WordPlay";
 import UnderTheHood from "@/components/UnderTheHood";
@@ -110,14 +108,13 @@ import TeeThanks from "@/components/BaseHtml/ThanksTee";
 export default {
   name: "app",
   components: {
-    ClickCounter,
     WordPlay,
     UnderTheHood,
     TeeThanks
   },
   data: () => ({
     msg: "Welcome to Your Vue.js App",
-    welinkLogo: welinkLogo,
+    // welinkLogo: welinkLogo,
     alert: false,
     alertMessage: "Have you tried clicking and tapping around the screen?",
     onTimer: ""
