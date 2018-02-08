@@ -238,7 +238,7 @@ export default {
 
   beforeDestroy() {
     //clearInterval(this.onTimer);
-    this.counter = 0;
+    this.$store.dispatch("setCounter", 0);
   }
 };
 </script>

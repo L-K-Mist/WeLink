@@ -4,10 +4,11 @@
         <!-- <v-toolbar app></v-toolbar> -->
     <v-layout column>
       <v-toolbar fluid class="transparent ml-0" name="dashboard-toolbar"  v-if="counter >= 9"  style="position: absolute;
-                                            width: 100%;
+                                            
                                             height: 70px;
                                             left: 10px;
-                                            top: 0px;"
+                                            top: 0px;
+                                            z-index: 10"
                                             >
         <v-layout fluid row wrap>
           <v-flex left xs4 name="welink-logo" >
