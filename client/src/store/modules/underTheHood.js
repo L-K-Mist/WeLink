@@ -13,10 +13,24 @@ const mutations = {
   openHowDialogue: state => {
     state.howDialogue = true;
   },
-  toggleHowDialogue: state => {
-    state.howDialogue = !state.howDialogue;
+  setHowDialogue: (state, payload) => {
+    state.howDialogue = payload;
   },
 };
+
+// const mutations = {
+//   setAlert: (state, payload) => {
+//     state.showAlert = payload;
+//   }
+// };
+// const actions = {
+//   setHowDialogue: ({
+//     commit
+//   }, payload) => {
+//     commit('setHowDialogue', payload);
+//   },
+// }
+
 
 const actions = {
   // Dialogue actions
@@ -25,10 +39,10 @@ const actions = {
   }) => {
     commit('openHowDialogue');
   },
-  toggleHowDialogue: ({
+  setHowDialogue: ({
     commit
-  }) => {
-    commit('toggleHowDialogue')
+  }, payload) => {
+    commit('setHowDialogue', payload);
   },
 };
 

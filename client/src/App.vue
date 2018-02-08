@@ -18,9 +18,9 @@
             <click-counter></click-counter>                  
           </v-flex>
           
-          <v-flex>
-            <v-btn color="primary" style="position: absolute; right: 30px" @click.native.stop="openHowMade">See How it's Made</v-btn>
-          </v-flex>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" @click.native.stop="openHowMade">See How it's Made</v-btn>
+          
         </v-layout>
       </v-toolbar>
     </v-layout>
@@ -61,6 +61,11 @@ export default {
       set(value) {
         return this.$store.dispatch("setCounter", value);
       }
+    }
+  },
+  methods: {
+    openHowMade: function() {
+      this.$store.dispatch("setHowDialogue", true);
     }
   }
 };

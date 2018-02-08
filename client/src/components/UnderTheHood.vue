@@ -1,7 +1,7 @@
 <template>
   <v-layout row justify-center>
     <v-flex xs12 sm10>
-      <v-dialog  v-model="dialogue"
+      <v-dialog  v-model="howDialogue"
         :fullscreen="$vuetify.breakpoint.xsOnly"
         max-width="95%"
         transition="dialog-bottom-transition"
@@ -11,7 +11,7 @@
         >
         <v-card>
           <v-toolbar dark color="primary darken-5"   style="flex: 0 0 auto">
-            <v-btn icon @click.native="dialogue = false" dark>
+            <v-btn icon @click.native="setHowDialogue(false)" dark>
               <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title>How it's Made</v-toolbar-title>
@@ -63,13 +63,18 @@ export default {
   props: {},
 
   computed: {
-    dialogue: {
+    howDialogue: {
       get() {
         return this.$store.getters.howDialogueState;
       },
-      set(dialogue) {
-        this.$store.state.howDialogue = dialogue; //not best way, should use action here
+      set(howDialogue) {
+        this.$store.state.howDialogue = howDialogue; //not best way, should use action here
       }
+    }
+  },
+  methods: {
+    setHowDialogue(newBool) {
+      this.$store.dispatch("setHowDialogue", newBool);
     }
   },
   destroyed() {

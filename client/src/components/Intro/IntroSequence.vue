@@ -201,9 +201,7 @@ export default {
     openThanksTee: function() {
       this.$store.dispatch("openTeeDialogue");
     },
-    openHowMade: function() {
-      this.$store.dispatch("openHowDialogue");
-    },
+
     sendAlertMessage: function() {
       this.alertMessage =
         "See the Primary Button above me? Click to learn more, when you're done exploring and creating";
