@@ -13,9 +13,9 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      "incrementCounter" // map `this.increment()` to `this.$store.dispatch('increment')
-    ])
+    // ...mapActions([
+    //   "incrementCounter" // map `this.increment()` to `this.$store.dispatch('increment')
+    // ])
   }
 };
 </script>

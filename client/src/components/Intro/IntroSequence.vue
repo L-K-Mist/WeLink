@@ -100,7 +100,7 @@
 //import Foot from "./components/Foot";
 //import MainContent from "./components/Main";
 import stars from "@/assets/starrysky.jpg";
-import { mapActions } from "vuex";
+//import { mapActions } from "vuex";
 import WordPlay from "@/components/Intro/WordPlay";
 import UnderTheHood from "@/components/UnderTheHood";
 import TeeThanks from "@/components/BaseHtml/ThanksTee";
@@ -188,16 +188,15 @@ export default {
     }, delay + displayFor);
   },
   methods: {
-    ...mapActions([
-      "incrementCounter", // map `this.increment()` to `this.$store.dispatch('increment')
-      "openTeeDialogue"
-    ]),
     // incrementCounter: function() {
     //   return this.counter++;
     // },
     // openTeeDialogue: function() {
     //   this.$store.state.teeDialogue = true;
     // },
+    incrementCounter: function() {
+      this.$store.dispatch("incrementCounter");
+    },
     openThanksTee: function() {
       this.$store.dispatch("openTeeDialogue");
     },
