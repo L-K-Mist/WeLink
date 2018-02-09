@@ -14,7 +14,7 @@
               right
               fab
                v-show="showFab"
-               @click="openTeeDialogue"
+               @click="setTeeDialogue(true)"
             >
               <v-icon x-large>favorite_border</v-icon>
             </v-btn>
@@ -191,9 +191,9 @@ export default {
     // incrementCounter: function() {
     //   return this.counter++;
     // },
-    // openTeeDialogue: function() {
-    //   this.$store.state.teeDialogue = true;
-    // },
+    setTeeDialogue: function(newBool) {
+      this.$store.dispatch("setTeeDialogue", newBool);
+    },
     incrementCounter: function() {
       this.$store.dispatch("incrementCounter");
     },

@@ -17,8 +17,8 @@ const mutations = {
   openTeeDialogue: state => {
     state.teeDialogue = true;
   },
-  toggleTeeDialogue: state => {
-    state.teeDialogue = !state.teeDialogue;
+  setTeeDialogue: (state, payload) => {
+    state.teeDialogue = payload;
   },
   // For revealing the BUTTON that activates the thanksTee dialogue
   revealLoveFab: state => {
@@ -37,10 +37,10 @@ const actions = {
   }) => {
     commit('openTeeDialogue');
   },
-  toggleTeeDialogue: ({
+  setTeeDialogue: ({
     commit
-  }) => {
-    commit('toggleTeeDialogue')
+  }, payload) => {
+    commit('setTeeDialogue', payload);
   },
   // Fab actions
   revealLoveFab: ({

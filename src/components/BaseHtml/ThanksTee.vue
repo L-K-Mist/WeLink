@@ -11,7 +11,7 @@
         >
         <v-card>
           <v-toolbar dark color="primary darken-5"   style="flex: 0 0 auto">
-            <v-btn icon @click.native="dialogue = false" dark>
+            <v-btn icon @click.native="setTeeDialogue(false)" dark>
               <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title >Personal Thanks to Some Special People</v-toolbar-title>
@@ -81,8 +81,13 @@ export default {
         return this.$store.getters.teeDialogueState;
       },
       set(dialogue) {
-        this.$store.dispatch("toggleTeeDialogue");
+        this.$store.dispatch("setTeeDialogue", dialogue);
       }
+    }
+  },
+  methods: {
+    setTeeDialogue(newBool) {
+      this.$store.dispatch("setTeeDialogue", newBool);
     }
   }
 };
