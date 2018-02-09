@@ -1,2 +1,0 @@
-webpackJsonp([0],[function(n,o,r){!function(){throw new Error('Cannot find module "babel-polyfill"')}(),function(){throw new Error('Cannot find module "./src/main.js"')}()}],[0]);
-//# sourceMappingURL=app.71a09def3dacda8a2b43.js.map
