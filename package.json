@@ -1,0 +1,21 @@
+{
+  "name": "pwa-welink",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "LKMist <vandenbosch.dylan1@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "node client/build/dev-server.js",
+    "start": "node client/build/dev-server.js",
+    "build": "node client/build/build.js"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
