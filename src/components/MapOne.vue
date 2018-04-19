@@ -1,5 +1,5 @@
 <template>
-<v-container>
+<v-container fluid align-content-center justify-center style="position: absolute; top: 60px">
 <v-btn @click.stop="showStreetMap">Street Map</v-btn>
 <v-btn @click.stop="showTerrainMap">Terrain</v-btn>
 <v-btn @click.stop="showRailwayMap">Railway Lines</v-btn>
