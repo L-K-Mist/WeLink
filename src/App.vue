@@ -20,12 +20,12 @@
           
           <v-spacer></v-spacer>
           <v-btn color="primary" @click.native.stop="openHowMade">See How it's Made</v-btn>
-          
         </v-layout>
       </v-toolbar>
     </v-layout>
     
     <v-content>
+          <v-btn color="primary" to="map">Map testing</v-btn>
     <intro-sequence></intro-sequence>
     <router-view></router-view>
 
