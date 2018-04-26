@@ -25,7 +25,6 @@
     </v-layout>
     
     <v-content>
-          <v-btn color="primary" to="map">Map testing</v-btn>
     <intro-sequence></intro-sequence>
     <router-view></router-view>
 
