@@ -22,7 +22,7 @@
                   This is a little app I'm working on to take my daily activity logs captured on pen and paper; and turn them into useable data. 
                 </p>
                 <p>
-                  What makes this possible is a great super-lean Natural Language Programming (NLP) library called <a href="https://nlp-compromise.github.io/#docs">Compromise</a>. Also thanks to the great newbie support received on their slack channel - in particular a night-lark SuperUser of the library, who goes by Aurielle.
+                  What makes this possible is a great super-lean Natural Language Programming (NLP) library called <a href="https://nlp-compromise.github.io/#docs" target="blank">Compromise</a>. Also thanks to the great newbie support received on their slack channel - in particular a night-lark SuperUser of the library, who goes by Aurielle.
                 </p>
                 <p>
                   Next I must find out how to plug in one of those microphone speech-to-text buttons, so that the user can simply dictate into the box by voice.
