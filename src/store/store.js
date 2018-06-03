@@ -4,7 +4,8 @@ import counter from './modules/counter';
 import thankTee from './modules/thankTee';
 import underTheHood from './modules/underTheHood'
 import comingSoon from './modules/comingSoon';
-import infoAlert from './modules/infoAlert'
+import infoAlert from './modules/infoAlert';
+import activityLog from './modules/nlpLog'
 
 Vue.use(Vuex);
 
@@ -36,7 +37,8 @@ export const store = new Vuex.Store({
     thankTee,
     comingSoon,
     infoAlert,
-    underTheHood
+    underTheHood,
+    activityLog
   }
 
 });

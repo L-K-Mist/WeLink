@@ -14,12 +14,13 @@
           <v-flex left xs4 name="welink-logo" >
             <img :src="welinkLogo" alt="Welink" style="position: absolute; left: 10px; width: 200px" transition="slide-x-transition"  >
           </v-flex>
-          <v-flex xs4>
+          <v-flex xs1>
             <click-counter></click-counter>                  
           </v-flex>
           
           <v-spacer></v-spacer>
-          <v-btn color="primary" @click.native.stop="openHowMade">See How it's Made</v-btn>
+          <v-btn color="primary" @click.native.stop="openHowMade">How This Site Was Made</v-btn>
+          <v-btn color="primary" @click.native.stop="openActivityLog">Something Usefull I'm working on</v-btn>
         </v-layout>
       </v-toolbar>
     </v-layout>
@@ -41,6 +42,7 @@ import ClickCounter from "@/components/Intro/ClickCounter";
 import { Emoji } from "emoji-mart-vue";
 
 export default {
+  // TODO: Add smiley to button
   components: {
     ClickCounter,
     VueFrame,
@@ -65,6 +67,9 @@ export default {
   methods: {
     openHowMade: function() {
       this.$store.dispatch("setHowDialogue", true);
+    },
+        openActivityLog: function() {
+      this.$store.dispatch("openActivityLog", true);
     }
   }
 };

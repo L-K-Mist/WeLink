@@ -88,6 +88,7 @@
           </v-flex>
           <under-the-hood></under-the-hood>
           <tee-thanks></tee-thanks>
+          <activity-log></activity-log>
       </div>
     </v-app>
   </div>
@@ -104,13 +105,15 @@ import stars from "@/assets/starrysky.jpg";
 import WordPlay from "@/components/Intro/WordPlay";
 import UnderTheHood from "@/components/UnderTheHood";
 import TeeThanks from "@/components/BaseHtml/ThanksTee";
+import ActivityLog from '@/components/nlp/ActivityLog';
 
 export default {
   name: "app",
   components: {
     WordPlay,
     UnderTheHood,
-    TeeThanks
+    TeeThanks,
+    ActivityLog
   },
   data: () => ({
     msg: "Welcome to Your Vue.js App",
@@ -196,9 +199,6 @@ export default {
     },
     incrementCounter: function() {
       this.$store.dispatch("incrementCounter");
-    },
-    openThanksTee: function() {
-      this.$store.dispatch("openTeeDialogue");
     },
 
     sendAlertMessage: function() {
