@@ -27,7 +27,7 @@
             leave-active-class="animated bounceOutRight" v-if="showComingSoon">
         <div class="impact-text" style="top: 0px">
           <h1 @click="showComingSoon = false" style="cursor: pointer" >
-            WeLink 2.0 Coming Soon...
+            Welcome to WeLink...
           </h1>
         </div>
       </transition>
@@ -37,7 +37,7 @@
         <div class="impact-text" style="top: 10vw"
               v-if="showWatchSpace">
           <h2 @click="showWatchSpace = false" class="text-xs-center" style="cursor: pointer" >
-            Watch This Space!
+            ...Yes this is GARISH
           </h2>
         </div>
       </transition>
@@ -46,7 +46,7 @@
               leave-active-class="animated bounceOutRight">
         <div class="impact-text" style="top: 20vw" v-if="showSharingHow">
           <h3 @click="showSharingHow = false" style="cursor: pointer" >
-            <i>We'll be sharing how we did it as we do it.</i>
+            <i>But it breaks the mold for your most punchy statements</i>
           </h3>
         </div>
       </transition>

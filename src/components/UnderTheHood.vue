@@ -32,11 +32,11 @@
                   </div>
                 <app-expansion-panel></app-expansion-panel>
               <br><br>
-                  <div class="text-xs-left" style="position: relative; top: -20px">
+                  <!-- <div class="text-xs-left" style="position: relative; top: -20px">
                     <h1>What's Next for this Site</h1>
                     <p>This site is intended to be a showcase of all that I've recently learnt. With that in mind, you can soon expect to see some integration with Arduino, and some fun <a href="https://p5js.org/libraries/" target="blank">P5js</a> stuff.</p>
                     <p>To execute the <a href="https://www.arduino.cc/arduino" target="blank">arduino</a> integration, this app-shell will need to "talk" to a server. For that we'll later use <a href="https://feathersjs.com/" target="blank">feathersJs</a>, for it's excellent server to front-end architecture - however, since that's another whole learning-curve for me, we'll first use Google's more newbie-friendly backend solution <a href="https://firebase.google.com/" target="blank">Firebase</a>.</p>
-                  </div>
+                  </div> -->
               </v-flex>
             </v-layout>
           </v-card-text>
@@ -49,6 +49,8 @@
 <script>
 import AppExpansionPanel from "@/components/ReUse/AppExpansionPanel";
 import { Picker, Emoji } from "emoji-mart-vue";
+
+// TODO find something else to say to replace What's Next for this site.
 
 export default {
   components: {

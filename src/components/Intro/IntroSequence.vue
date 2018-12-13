@@ -87,7 +87,6 @@
             </v-alert>
           </v-flex>
           <under-the-hood></under-the-hood>
-          <tee-thanks></tee-thanks>
           <activity-log></activity-log>
       </div>
     </v-app>
@@ -104,15 +103,13 @@ import stars from "@/assets/starrysky.jpg";
 //import { mapActions } from "vuex";
 import WordPlay from "@/components/Intro/WordPlay";
 import UnderTheHood from "@/components/UnderTheHood";
-import TeeThanks from "@/components/BaseHtml/ThanksTee";
-import ActivityLog from '@/components/nlp/ActivityLog';
+import ActivityLog from "@/components/nlp/ActivityLog";
 
 export default {
   name: "app",
   components: {
     WordPlay,
     UnderTheHood,
-    TeeThanks,
     ActivityLog
   },
   data: () => ({

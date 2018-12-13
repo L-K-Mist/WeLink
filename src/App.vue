@@ -20,7 +20,7 @@
           
           <v-spacer></v-spacer>
           <v-btn color="primary" @click.native.stop="openHowMade">How This Site Was Made</v-btn>
-          <v-btn color="primary" @click.native.stop="openActivityLog">Something Usefull I'm working on</v-btn>
+          <v-btn color="primary" @click.native.stop="openActivityLog">Something Useful I'm working on</v-btn>
         </v-layout>
       </v-toolbar>
     </v-layout>
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+// TODO: Find something else to open on clicking the Love Button
+
 import IntroSequence from "./components/Intro/IntroSequence";
 import welinkLogo from "@/assets/welink-logo-pwa.png";
 import VueFrame from "vue-frame";
@@ -68,7 +70,7 @@ export default {
     openHowMade: function() {
       this.$store.dispatch("setHowDialogue", true);
     },
-        openActivityLog: function() {
+    openActivityLog: function() {
       this.$store.dispatch("openActivityLog", true);
     }
   }

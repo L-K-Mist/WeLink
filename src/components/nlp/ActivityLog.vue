@@ -10,7 +10,7 @@
         >
         <v-card>
           <v-toolbar dark color="primary darken-5"   style="flex: 0 0 auto">
-            <v-btn icon @click.native="dialogue(false)" dark>
+            <v-btn icon @click="dialogue = false" dark>
               <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title> Using NLP Compromise<emoji  emoji="two_hearts" :size="20"></emoji> for Text to Data</v-toolbar-title>
@@ -25,10 +25,13 @@
                   What makes this possible is a great super-lean Natural Language Programming (NLP) library called <a href="https://nlp-compromise.github.io/#docs" target="blank">Compromise</a>. Also thanks to the great newbie support received on their slack channel - in particular a night-lark SuperUser of the library, who goes by Aurielle.
                 </p>
                 <p>
-                  Next I must find out how to plug in one of those microphone speech-to-text buttons, so that the user can simply dictate into the box by voice.
+                  Down the line I should plug in one of those microphone speech-to-text buttons, so that the user can simply dictate into the box by voice.
                 </p>
                 <p>
                   So then it's voice-to-text and text-to-spreadsheet. Woot! <emoji  emoji="fist" :size="15"></emoji><emoji  emoji="nerd_face" :size="20"></emoji>
+                </p>
+                <p>
+                  <strong>Please note:</strong> This app assumes that the entity has a database of past customers and suppliers (and their spoken nicknames) around which it categorises the other free-text inputs.
                 </p>
               </v-flex>
               <v-flex xs6>
@@ -76,7 +79,7 @@ export default {
     }
   },
   methods: {
-      submit() {
+    submit() {
       this.$store.dispatch("newRawLog", this.rawLog);
     }
   },
